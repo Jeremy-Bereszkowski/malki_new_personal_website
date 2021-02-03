@@ -1,20 +1,3 @@
-/*!
-
-=========================================================
-* NextJS Material Kit PRO v1.1.0 based on Material Kit PRO - v2.0.2 (Bootstrap 4.0.0 Final Edition) and Material Kit PRO React v1.8.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/nextjs-material-kit-pro
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
 // ##############################
 // // // Function that converts from hex color to rgb color
 // // // Example: input = #9c27b0 => output = 156, 39, 176
@@ -134,17 +117,8 @@ const grayColor = [
 ];
 const whiteColor = "#FFF";
 const blackColor = "#000";
-const twitterColor = "#55acee";
-const facebookColor = "#3b5998";
 const googleColor = "#dd4b39";
 const linkedinColor = "#0976b4";
-const pinterestColor = "#cc2127";
-const youtubeColor = "#e52d27";
-const tumblrColor = "#35465c";
-const behanceColor = "#1769ff";
-const dribbbleColor = "#ea4c89";
-const redditColor = "#ff4500";
-const instagramColor = "#125688";
 
 const transition = {
   transition: "all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1)"
@@ -184,22 +158,6 @@ const card = {
   background: whiteColor
 };
 
-const defaultFont = {
-  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-  fontWeight: "300",
-  lineHeight: "1.5em"
-};
-
-const boxShadow = {
-  boxShadow:
-    "0 10px 30px -12px rgba(" +
-    hexToRgb(blackColor) +
-    ", 0.42), 0 4px 25px 0px rgba(" +
-    hexToRgb(blackColor) +
-    ", 0.12), 0 8px 10px -5px rgba(" +
-    hexToRgb(blackColor) +
-    ", 0.2)"
-};
 const primaryBoxShadow = {
   boxShadow:
     "0 12px 20px -10px rgba(" +
@@ -295,33 +253,11 @@ const roseCardHeader = {
     "linear-gradient(60deg, " + roseColor[1] + ", " + roseColor[2] + ")",
   ...roseBoxShadow
 };
-const cardActions = {
-  margin: "0 20px 10px",
-  paddingTop: "10px",
-  borderTop: "1px solid  " + grayColor[2],
-  height: "auto",
-  ...defaultFont
-};
 
 const cardHeader = {
   margin: "-30px 15px 0",
   borderRadius: "3px",
   padding: "15px"
-};
-
-const defaultBoxShadow = {
-  border: "0",
-  borderRadius: "3px",
-  boxShadow:
-    "0 10px 20px -12px rgba(" +
-    hexToRgb(blackColor) +
-    ", 0.42), 0 3px 20px 0px rgba(" +
-    hexToRgb(blackColor) +
-    ", 0.12), 0 8px 10px -5px rgba(" +
-    hexToRgb(blackColor) +
-    ", 0.2)",
-  padding: "10px 0",
-  transition: "all 150ms ease 0s"
 };
 
 const title = {
@@ -331,26 +267,6 @@ const title = {
   marginTop: "30px",
   marginBottom: "25px",
   minHeight: "32px",
-};
-
-const cardTitle = {
-  "&, & a": {
-    ...title,
-    marginTop: ".625rem",
-    marginBottom: "0.75rem",
-    minHeight: "auto"
-  }
-};
-
-const cardLink = {
-  "& + $cardLink": {
-    marginLeft: "1.25rem"
-  }
-};
-
-const cardSubtitle = {
-  marginBottom: "0",
-  marginTop: "-.375rem"
 };
 
 const main = {
@@ -384,53 +300,8 @@ const section = {
   backgroundSize: "cover"
 };
 
-const sectionDark = {
-  backgroundColor: grayColor[3],
-  background:
-    "radial-gradient(ellipse at center," +
-    grayColor[4] +
-    " 0," +
-    grayColor[5] +
-    " 100%)"
-};
-
-const sectionDescription = {
-  marginTop: "130px"
-};
-
 const description = {
   color: grayColor[0]
-};
-
-const mlAuto = {
-  marginLeft: "auto"
-};
-
-const mrAuto = {
-  marginRight: "auto"
-};
-
-const btnLink = {
-  backgroundColor: "transparent",
-  boxShdow: "none",
-  marginTop: "5px",
-  marginBottom: "5px"
-};
-const coloredShadow = {
-  // some jss/css to make the cards look a bit better on Internet Explorer
-  "@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)": {
-    display: "none !important"
-  },
-  transform: "scale(0.94)",
-  top: "12px",
-  filter: "blur(12px)",
-  position: "absolute",
-  width: "100%",
-  height: "100%",
-  backgroundSize: "cover",
-  zIndex: "-1",
-  transition: "opacity .45s",
-  opacity: "0"
 };
 
 export {
@@ -439,9 +310,7 @@ export {
   transition,
   container,
   containerFluid,
-  boxShadow,
   card,
-  defaultFont,
   primaryColor,
   secondaryColor,
   warningColor,
@@ -452,17 +321,8 @@ export {
   grayColor,
   whiteColor,
   blackColor,
-  twitterColor,
-  facebookColor,
   googleColor,
   linkedinColor,
-  pinterestColor,
-  youtubeColor,
-  tumblrColor,
-  behanceColor,
-  dribbbleColor,
-  redditColor,
-  instagramColor,
   primaryBoxShadow,
   infoBoxShadow,
   successBoxShadow,
@@ -475,22 +335,11 @@ export {
   infoCardHeader,
   primaryCardHeader,
   roseCardHeader,
-  cardActions,
   cardHeader,
-  defaultBoxShadow,
   title,
-  cardTitle,
   description,
-  cardLink,
-  cardSubtitle,
   main,
   mainRaised,
   section,
-  sectionDark,
-  sectionDescription,
-  mlAuto,
-  mrAuto,
-  btnLink,
-  coloredShadow,
   hexToRgb
 };
