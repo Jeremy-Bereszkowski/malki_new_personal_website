@@ -7,8 +7,6 @@ import {makeStyles} from "@material-ui/core/styles"
 import {Grid} from "@material-ui/core";
 import Avatar from "@material-ui/core/Avatar";
 
-import HeaderBody from "components/GridLayouts/HeaderBody";
-
 import useIsTouchDevice from "util/device-detect";
 
 import {sectionHeight} from "assets/jss/coreStyles";
@@ -92,7 +90,7 @@ export default function ProfessionalProfile(props) {
     )
 }
 
-AboutMe.propTypes = {
+ProfessionalProfile.propTypes = {
     header: PropTypes.string.isRequired,
     subHeader: PropTypes.string.isRequired,
     data: PropTypes.object,
