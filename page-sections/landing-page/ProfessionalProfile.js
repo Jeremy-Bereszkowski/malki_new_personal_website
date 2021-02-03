@@ -28,15 +28,13 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function ProfessionalProfile(props) {
-    const {header, subHeader, data, avatar} = props
+    const {data, avatar} = props
     const classes = useStyles()
 
     const para = data.para.map((ele, key) => (
         <Grid item key={key} className={classes.container}>
             <h5>
-                <b>
-                    {ele}
-                </b>
+                {ele}
             </h5>
         </Grid>
     ))
