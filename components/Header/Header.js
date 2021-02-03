@@ -10,8 +10,6 @@ import {Grid} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 
-import SocialButtonGroup from "../Buttons/SocialButtonGroup";
-
 import useIsTouchDevice from "util/device-detect";
 
 import {
@@ -20,8 +18,6 @@ import {
   hexToRgb, whiteColor,
 } from "assets/jss/nextjs-material-kit-pro";
 import HeaderData from "assets/data/components/header";
-import URLS from "assets/strings/urls";
-import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -109,11 +105,6 @@ const useStyles = makeStyles(theme => ({
   invisible: {
     color: "transparent",
   },
-  link: {
-    "&:hover, &:focus": {
-      color: Colours.primary
-    }
-  },
   margin: {
     marginLeft: "4px",
   }
@@ -123,7 +114,6 @@ export default function Header(props) {
   const classes = useStyles();
   const [brandClasses, setBrandClasses] = React.useState(classNames(classes.title, classes.invisible))
   const [mobileBrandClasses, setMobileBrandClasses] = React.useState(classNames(classes.mobileTitle, classes.invisible))
-  const [transparent, setTransparent] = React.useState(true)
   const color = "transparent"
   const changeColorOnScroll = {
     height: 25,
@@ -152,7 +142,6 @@ export default function Header(props) {
           .classList.add(classes[changeColorOnScroll.color]);
       setBrandClasses(classes.title)
       setMobileBrandClasses(classes.mobileTitle)
-      setTransparent(false)
     } else {
       document.body
           .getElementsByTagName("header")[0]
@@ -162,7 +151,6 @@ export default function Header(props) {
           .classList.remove(classes[changeColorOnScroll.color]);
       setBrandClasses(classNames(classes.title, classes.invisible))
       setMobileBrandClasses(classNames(classes.mobileTitle, classes.invisible))
-      setTransparent(true)
     }
   };
 
@@ -203,33 +191,16 @@ export default function Header(props) {
   return (
       <AppBar className={appBarClasses}>
         <div className={classes.container}>
-          {
-            transparent ?
-                <Grid
-                    container
-                    direction={"row"}
-                    justify={"flex-end"}
-                    alignItems={"center"}
-                >
-                  <Grid item>
-                    <SocialButtonGroup transparent={transparent}/>
-                  </Grid>
-                </Grid>
-                :
-                <Grid
-                    container
-                    direction={"row"}
-                    justify={"space-between"}
-                    alignItems={"flex-start"}
-                >
-                  <Grid item>
-                    {brand}
-                  </Grid>
-                  <Grid item>
-                    <SocialButtonGroup transparent={transparent}/>
-                  </Grid>
-                </Grid>
-          }
+          <Grid
+              container
+              direction={"row"}
+              justify={"space-between"}
+              alignItems={"flex-start"}
+          >
+            <Grid item>
+              {brand}
+            </Grid>
+          </Grid>
         </div>
       </AppBar>
   );

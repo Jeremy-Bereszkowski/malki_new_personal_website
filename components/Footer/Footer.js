@@ -4,11 +4,8 @@ import classNames from "classnames";
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
 
-import SocialButtonGroup from "components/Buttons/SocialButtonGroup";
-
 import {grayColor, whiteColor} from "assets/jss/nextjs-material-kit-pro";
 import FooterData from "assets/data/components/footer";
-import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
     footer: {
@@ -25,7 +22,7 @@ const useStyles = makeStyles({
         zIndex: "8"
     },
     footerBrand: {
-        color: Colours.primary,
+        color: "white",
         margin: "0",
     },
     dark: {
@@ -91,9 +88,6 @@ export default function Footer() {
                             </Grid>
                         </Grid>
                     </Grid>
-                </Grid>
-                <Grid item xs={12} md={3}>
-                    <SocialButtonGroup />
                 </Grid>
                 <Grid item xs={12} md={3}>
                     <Grid
