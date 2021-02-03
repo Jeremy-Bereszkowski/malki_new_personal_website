@@ -68,10 +68,6 @@ export default function ProfessionalProfile(props) {
                             <br/>
                         </Grid>
                         {para}
-                        <Grid item>
-                            <br/>
-                            <br/>
-                        </Grid>
                     </Grid>
             </Grid>
             <Grid item>
