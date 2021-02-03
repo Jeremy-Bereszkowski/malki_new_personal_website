@@ -45,7 +45,7 @@ export default function ProfessionalProfile(props) {
             alignContent={"center"}
             className={classNames(classes.sectionHeight, classes.margin)}
         >
-            <Grid item md={8}>
+            <Grid item sm={12} md={8}>
                 <Grid
                     container
                     direction={"column"}
@@ -66,7 +66,7 @@ export default function ProfessionalProfile(props) {
                     {para}
                 </Grid>
             </Grid>
-            <Grid item>
+            <Grid item sm={12} md={3}>
                 <Avatar
                     src={avatar}
                     className={classes.large}
