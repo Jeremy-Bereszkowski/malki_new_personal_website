@@ -16,6 +16,8 @@ import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 import data from "assets/data/pages/landing-data"
 import Colours from "assets/strings/colours";
 
+import FlareIcon from '@material-ui/icons/Flare';
+
 const useStyles = makeStyles({
     padding: {
         padding: "4vh 0",
@@ -55,17 +57,35 @@ export default function LandingPage(props) {
                             avatar={data.aboutMe.avatar}
                         />
                     </Grid>
+                    <Grid item>
+                        <FlareIcon/>
+                    </Grid>
                     <Grid item className={classNames(classes.padding, classes.baseBackground)}>
                         <Qualifications
                             qualifications={data.qualifications}
                             specialities={data.specialities}
                         />
                     </Grid>
+                    <Grid item>
+                        <FlareIcon/>
+                    </Grid>
                     <Grid item className={classNames(classes.padding, classes.baseBackground)}>
                         <TreatmentApproach
                             treatmentApproach={data.treatmentApproach}
                             languages={data.languages}
                         />
+                    </Grid>
+                    <Grid item className={classNames(classes.padding, classes.baseBackground)}>
+                        <Grid
+                            container
+                            direction={"column"}
+                            justify={"center"}
+                            alignItems={"center"}
+                        >
+                            <Grid item>
+                                <FlareIcon style={{margin: "0 auto"}}/>
+                            </Grid>
+                        </Grid>
                     </Grid>
                     <Grid item className={classNames(classes.padding, classes.baseBackground)}>
                         <GeneralInfo
