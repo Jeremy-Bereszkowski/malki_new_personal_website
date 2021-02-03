@@ -45,7 +45,9 @@ export default function TreatmentApproach(props) {
     const leftPanel = (
         <div className={classes.textMargin}>
             <h3>
-                {treatmentApproach.header}
+                <b>
+                    {treatmentApproach.header}
+                </b>
             </h3>
             <br/>
             <br/>

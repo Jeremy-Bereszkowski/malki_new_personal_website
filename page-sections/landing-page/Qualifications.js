@@ -45,7 +45,9 @@ export default function Qualifications(props) {
     const leftPanel = (
         <div className={classes.textMargin}>
             <h3>
-                {qualifications.header}
+                <b>
+                    {qualifications.header}
+                </b>
             </h3>
             <br/>
             <br/>
