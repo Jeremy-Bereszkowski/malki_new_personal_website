@@ -1,86 +1,77 @@
 import React from 'react'
 import PropTypes from "prop-types"
-import classNames from "classnames"
 
 import {makeStyles} from "@material-ui/core/styles"
-import {Grid} from "@material-ui/core";
 
-import {sectionHeaderText} from "assets/jss/coreStyles";
-import Colours from "../../assets/strings/colours";
+import {sectionHeight} from "assets/jss/coreStyles";
 
 const useStyles = makeStyles(theme => ({
-    sectionHeaderText,
-    container: {
-        maxWidth: "1600px",
-        margin: "0 auto",
+    root: {
+        ...sectionHeight,
+        margin: "2.5vh auto",
+        maxWidth: "85%",
     },
-    light: {
-        color: "white"
+    leftText: {
+        textAlign: "start"
     },
-    green: {
-        color: Colours.contrast,
+    centerText: {
+        textAlign: "center"
     },
-    ternary: {
-        color: Colours.ternary,
-    }
 }))
 
 export default function HeaderBody(props) {
-    const {header, headerColor, children} = props
+    const {header, para, centerText, list, boldHeader} = props
     const classes = useStyles()
 
-    let headerClass;
-    switch (headerColor) {
-        case "light":
-            headerClass = classNames(classes.sectionHeaderText, classes.light);
-            break;
-        case "green":
-            headerClass = classNames(classes.sectionHeaderText, classes.green);
-            break;
-        case "ternary":
-            headerClass = classNames(classes.sectionHeaderText, classes.ternary)
-            break;
-        default:
-            headerClass = classes.sectionHeaderText
-            break;
-    }
+    const textAlign = centerText ? classes.centerText : classes.leftText
+
+    const paraArray = para.map((ele, key) => (
+        <h4 key={key} className={textAlign}>
+            {ele}
+        </h4>
+    ))
+
+    const listArray = para.map((ele, key) => (
+        <li key={key} className={textAlign}>
+            {ele}
+        </li>
+    ))
+
+    const paraRender = list ? listArray : paraArray
+
+    const headerRender = boldHeader ? (
+        <h3 className={textAlign}>
+            <b>
+                {header}
+            </b>
+        </h3>
+    ) : (
+        <h3 className={textAlign}>
+            {header}
+        </h3>
+    )
 
     return (
-        <Grid
-            container
-            direction={"column"}
-            justify={"center"}
-            alignItems={"stretch"}
-            className={classes.container}
-        >
-            <Grid item>
-                <h1 className={headerClass}>
-                    {header}
-                </h1>
-            </Grid>
-            <Grid item>
-                <br/>
-            </Grid>
-            <Grid item>
-                {children}
-            </Grid>
-        </Grid>
+        <>
+            {headerRender}
+            <br/>
+            <br/>
+            {paraRender}
+        </>
     )
 }
 
 HeaderBody.defaultProp = {
-    headerColor: "dark",
+    centerText: false,
+    list: false,
+    boldHeader: true,
 }
 
 HeaderBody.propTypes = {
-    children: PropTypes.node,
-    header: PropTypes.string,
-    subHeader: PropTypes.string,
-    headerColor: PropTypes.oneOf([
-        "light",
-        "dark",
-        "green",
-        "ternary"
-    ])
+    header: PropTypes.string.isRequired,
+    para: PropTypes.array.isRequired,
+    centerText: PropTypes.bool,
+    list: PropTypes.bool,
+    boldHeader: PropTypes.bool,
 }
 

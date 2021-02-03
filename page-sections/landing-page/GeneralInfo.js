@@ -5,15 +5,13 @@ import {makeStyles} from "@material-ui/core/styles"
 
 import Grid from "@material-ui/core/Grid";
 import {sectionHeight} from "../../assets/jss/coreStyles";
+import HeaderBody from "../../components/GridLayouts/HeaderBody";
 
 const useStyles = makeStyles({
     root: {
         ...sectionHeight,
         margin: "2.5vh auto",
         maxWidth: "85%",
-    },
-    centerText: {
-        textAlign: "center"
     },
 })
 
@@ -29,12 +27,6 @@ export default function GeneralInfo(props) {
     const {header, para} = props
     const classes = useStyles()
 
-    const paraArray = para.map((ele, key) => (
-        <h4 key={key} className={classes.centerText}>
-            {ele}
-        </h4>
-    ))
-
     return (
         <Grid
             container
@@ -44,14 +36,12 @@ export default function GeneralInfo(props) {
             className={classes.root}
         >
             <Grid item>
-                <h3 className={classes.centerText}>
-                    <b>
-                        {header}
-                    </b>
-                </h3>
-                <br/>
-                <br/>
-                {paraArray}
+                <HeaderBody
+                    header={header}
+                    para={para}
+                    centerText={true}
+                    boldHeader={true}
+                />
             </Grid>
         </Grid>
     )
