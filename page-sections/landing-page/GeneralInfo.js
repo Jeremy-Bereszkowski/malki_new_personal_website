@@ -2,10 +2,11 @@ import React from 'react'
 import PropTypes from "prop-types"
 
 import {makeStyles} from "@material-ui/core/styles"
-
 import Grid from "@material-ui/core/Grid";
-import {sectionHeight} from "../../assets/jss/coreStyles";
-import HeaderParaArray from "../../components/GridLayouts/HeaderParaArray";
+
+import HeaderParaArray from "components/GridLayouts/HeaderParaArray";
+
+import {sectionHeight} from "assets/jss/coreStyles";
 
 const useStyles = makeStyles({
     root: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles({
 
 
 /**
- * GeneralInfo Page Section Component
+ * General Info Section Component
  *
  * @param props
  * @returns {JSX.Element}

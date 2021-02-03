@@ -5,9 +5,10 @@ import PropTypes from "prop-types"
 import {makeStyles} from "@material-ui/core/styles"
 import Avatar from "@material-ui/core/Avatar";
 
+import ThreeQuarterGrid from "components/GridLayouts/ThreeQuarterGrid";
+import HeaderParaArray from "components/GridLayouts/HeaderParaArray";
+
 import {sectionHeight} from "assets/jss/coreStyles";
-import ThreeQuarterGrid from "../../components/GridLayouts/ThreeQuarterGrid";
-import HeaderParaArray from "../../components/GridLayouts/HeaderParaArray";
 
 const useStyles = makeStyles(theme => ({
     sectionHeight,
@@ -27,7 +28,7 @@ const useStyles = makeStyles(theme => ({
 
 
 /**
- * Professional Profile Page Section Component
+ * Professional Profile Section Component
  *
  * @param props
  * @returns {JSX.Element}
@@ -43,7 +44,7 @@ export default function ProfessionalProfile(props) {
                 header={data.header}
                 para={data.para}
                 centerText={false}
-                boldHeader={false}
+                boldHeader={true}
             />
         </div>
     )

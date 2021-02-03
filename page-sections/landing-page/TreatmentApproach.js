@@ -4,9 +4,10 @@ import PropTypes from "prop-types"
 
 import {makeStyles} from "@material-ui/core/styles"
 
+import ThreeQuarterGrid from "components/GridLayouts/ThreeQuarterGrid";
+import HeaderParaArray from "components/GridLayouts/HeaderParaArray";
+
 import {sectionHeight} from "assets/jss/coreStyles";
-import ThreeQuarterGrid from "../../components/GridLayouts/ThreeQuarterGrid";
-import HeaderParaArray from "../../components/GridLayouts/HeaderParaArray";
 
 const useStyles = makeStyles(theme => ({
     sectionHeight,

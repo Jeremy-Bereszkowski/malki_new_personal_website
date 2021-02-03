@@ -4,11 +4,12 @@ import PropTypes from "prop-types"
 
 import {makeStyles} from "@material-ui/core/styles"
 
-import {sectionHeight} from "assets/jss/coreStyles";
-import ThreeQuarterGrid from "../../components/GridLayouts/ThreeQuarterGrid";
-import HeaderParaArray from "../../components/GridLayouts/HeaderParaArray";
+import ThreeQuarterGrid from "components/GridLayouts/ThreeQuarterGrid";
+import HeaderParaArray from "components/GridLayouts/HeaderParaArray";
 
-const useStyles = makeStyles(theme => ({
+import {sectionHeight} from "assets/jss/coreStyles";
+
+const useStyles = makeStyles({
     sectionHeight,
     margin: {
         margin: "2.5vh auto",
@@ -17,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     textMargin: {
         paddingRight: "60px",
     },
-}))
+})
 
 
 /**

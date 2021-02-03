@@ -12,12 +12,10 @@ import Qualifications from "page-sections/landing-page/Qualifications";
 import TreatmentApproach from "page-sections/landing-page/TreatmentApproach";
 import GeneralInfo from "page-sections/landing-page/GeneralInfo";
 
+import SectionSpacer from "components/Icons/SectionSpacer";
+
 import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 import data from "assets/data/pages/landing-data"
-import Colours from "assets/strings/colours";
-
-import FlareIcon from '@material-ui/icons/Flare';
-import SectionSpacer from "../components/Icons/SectionSpacer";
 
 const useStyles = makeStyles({
     padding: {
@@ -28,14 +26,15 @@ const useStyles = makeStyles({
     baseBackground: {
         backgroundColor: grayColor[14],
     },
-    lightGreyBackground: {
-        backgroundColor: Colours.secondary,
-    },
-    blueGreyBackground: {
-        backgroundColor: Colours.contrast,
-    },
 });
 
+/**
+ * Landing Page Component
+ *
+ * @param props
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function LandingPage(props) {
     React.useEffect(() => {
         window.scrollTo(0, 0);
