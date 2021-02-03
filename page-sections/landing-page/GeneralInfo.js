@@ -2,21 +2,23 @@ import React from 'react'
 import PropTypes from "prop-types"
 
 import {makeStyles} from "@material-ui/core/styles"
-
 import Grid from "@material-ui/core/Grid";
+
+import HeaderParaArray from "components/GridLayouts/HeaderParaArray";
+
+import {sectionHeight} from "assets/jss/coreStyles";
 
 const useStyles = makeStyles({
     root: {
-        marginBottom: "2.5vh"
-    },
-    centerText: {
-        textAlign: "center"
+        ...sectionHeight,
+        margin: "2.5vh auto",
+        maxWidth: "85%",
     },
 })
 
 
 /**
- * Qualifications Page Section Component
+ * General Info Section Component
  *
  * @param props
  * @returns {JSX.Element}
@@ -25,12 +27,6 @@ const useStyles = makeStyles({
 export default function GeneralInfo(props) {
     const {header, para} = props
     const classes = useStyles()
-
-    const paraArray = para.map((ele, key) => (
-        <h4 key={key} className={classes.centerText}>
-            {ele}
-        </h4>
-    ))
 
     return (
         <Grid
@@ -41,14 +37,12 @@ export default function GeneralInfo(props) {
             className={classes.root}
         >
             <Grid item>
-                <h3 className={classes.centerText}>
-                    <b>
-                        {header}
-                    </b>
-                </h3>
-                <br/>
-                <br/>
-                {paraArray}
+                <HeaderParaArray
+                    header={header}
+                    para={para}
+                    centerText={true}
+                    boldHeader={true}
+                />
             </Grid>
         </Grid>
     )

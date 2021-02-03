@@ -5,17 +5,16 @@ import PropTypes from "prop-types"
 import {makeStyles} from "@material-ui/core/styles"
 import Avatar from "@material-ui/core/Avatar";
 
+import ThreeQuarterGrid from "components/GridLayouts/ThreeQuarterGrid";
+import HeaderParaArray from "components/GridLayouts/HeaderParaArray";
+
 import {sectionHeight} from "assets/jss/coreStyles";
-import ThreeQuarterGrid from "../../components/GridLayouts/ThreeQuarterGrid";
 
 const useStyles = makeStyles(theme => ({
     sectionHeight,
     margin: {
         margin: "2.5vh auto",
         maxWidth: "85%",
-    },
-    container: {
-        maxWidth: "80%",
     },
     textMargin: {
         paddingRight: "60px",
@@ -29,7 +28,7 @@ const useStyles = makeStyles(theme => ({
 
 
 /**
- * Professional Profile Page Section Component
+ * Professional Profile Section Component
  *
  * @param props
  * @returns {JSX.Element}
@@ -39,20 +38,14 @@ export default function ProfessionalProfile(props) {
     const {data, avatar} = props
     const classes = useStyles()
 
-    const para = data.para.map((ele, key) => (
-        <h5 key={key}>
-            {ele}
-        </h5>
-    ))
-
     const leftPanel = (
         <div className={classes.textMargin}>
-            <h3>
-                {data.header}
-            </h3>
-            <br/>
-            <br/>
-            {para}
+            <HeaderParaArray
+                header={data.header}
+                para={data.para}
+                centerText={false}
+                boldHeader={true}
+            />
         </div>
     )
 
