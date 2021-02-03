@@ -7,6 +7,7 @@ import {Grid} from "@material-ui/core";
 import Avatar from "@material-ui/core/Avatar";
 
 import {sectionHeight} from "assets/jss/coreStyles";
+import ThreeQuarterGrid from "../../components/GridLayouts/ThreeQuarterGrid";
 
 const useStyles = makeStyles(theme => ({
     sectionHeight,
@@ -47,43 +48,41 @@ export default function ProfessionalProfile(props) {
         </Grid>
     ))
 
-    return (
+    const leftPanel = (
         <Grid
             container
-            direction={"row"}
+            direction={"column"}
             justify={"center"}
-            alignItems={"center"}
+            alignItems={"flex-start"}
             alignContent={"center"}
-            className={classNames(classes.sectionHeight, classes.margin)}
+            className={classes.textMargin}
         >
-            <Grid item sm={12} md={8}>
-                <Grid
-                    container
-                    direction={"column"}
-                    justify={"center"}
-                    alignItems={"flex-start"}
-                    alignContent={"center"}
-                    className={classes.textMargin}
-                >
-                    <Grid item>
-                        <h3>
-                            {data.header}
-                        </h3>
-                    </Grid>
-                    <Grid item>
-                        <br/>
-                        <br/>
-                    </Grid>
-                    {para}
-                </Grid>
+            <Grid item>
+                <h3>
+                    {data.header}
+                </h3>
             </Grid>
-            <Grid item sm={12} md={3}>
-                <Avatar
-                    src={avatar}
-                    className={classes.large}
-                />
+            <Grid item>
+                <br/>
+                <br/>
             </Grid>
+            {para}
         </Grid>
+    )
+
+    const rightPanel = (
+        <Avatar
+            src={avatar}
+            className={classes.large}
+        />
+    )
+
+    return (
+        <ThreeQuarterGrid
+            leftPanel={leftPanel}
+            rightPanel={rightPanel}
+            rootClassName={classNames(classes.sectionHeight, classes.margin)}
+        />
     )
 }
 
