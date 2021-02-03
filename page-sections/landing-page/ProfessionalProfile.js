@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
         maxWidth: "85%",
     },
     container: {
-        maxWidth: "85%",
+        maxWidth: "75%",
     },
     large: {
         width: theme.spacing(28),
