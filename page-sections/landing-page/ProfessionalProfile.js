@@ -1,14 +1,10 @@
 import React from 'react'
 import classNames from "classnames"
-import Flip from "react-reveal";
-import Roll from "react-reveal";
 import PropTypes from "prop-types"
 
 import {makeStyles} from "@material-ui/core/styles"
 import {Grid} from "@material-ui/core";
 import Avatar from "@material-ui/core/Avatar";
-
-import useIsTouchDevice from "util/device-detect";
 
 import {sectionHeight} from "assets/jss/coreStyles";
 
@@ -49,7 +45,6 @@ export default function ProfessionalProfile(props) {
             className={classNames(classes.sectionHeight, classes.margin)}
         >
             <Grid item md={8}>
-                <Flip left>
                     <Grid
                         container
                         direction={"column"}
@@ -78,15 +73,12 @@ export default function ProfessionalProfile(props) {
                             <br/>
                         </Grid>
                     </Grid>
-                </Flip>
             </Grid>
             <Grid item>
-                <Roll right={!useIsTouchDevice()} left={useIsTouchDevice()}>
                     <Avatar
                         src={avatar}
                         className={classes.large}
                     />
-                </Roll>
             </Grid>
         </Grid>
     )
