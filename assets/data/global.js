@@ -1,4 +1,3 @@
-/*Peronsal Information*/
 const headerString = "Malki New | Family Therapist & Counsellor"
 
 const fullName = "Malki New"

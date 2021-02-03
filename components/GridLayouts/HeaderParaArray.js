@@ -3,14 +3,14 @@ import PropTypes from "prop-types"
 
 import {makeStyles} from "@material-ui/core/styles"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
     leftText: {
         textAlign: "start"
     },
     centerText: {
         textAlign: "center"
     },
-}))
+})
 
 export default function HeaderParaArray(props) {
     const {header, para, centerText, list, boldHeader} = props
