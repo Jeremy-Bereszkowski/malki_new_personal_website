@@ -4,10 +4,13 @@ import PropTypes from "prop-types"
 import {makeStyles} from "@material-ui/core/styles"
 
 import Grid from "@material-ui/core/Grid";
+import {sectionHeight} from "../../assets/jss/coreStyles";
 
 const useStyles = makeStyles({
     root: {
-        marginBottom: "2.5vh"
+        ...sectionHeight,
+        margin: "2.5vh auto",
+        maxWidth: "85%",
     },
     centerText: {
         textAlign: "center"
@@ -16,7 +19,7 @@ const useStyles = makeStyles({
 
 
 /**
- * Qualifications Page Section Component
+ * GeneralInfo Page Section Component
  *
  * @param props
  * @returns {JSX.Element}

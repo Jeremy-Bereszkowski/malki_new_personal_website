@@ -17,6 +17,7 @@ import data from "assets/data/pages/landing-data"
 import Colours from "assets/strings/colours";
 
 import FlareIcon from '@material-ui/icons/Flare';
+import SectionSpacer from "../components/Icons/SectionSpacer";
 
 const useStyles = makeStyles({
     padding: {
@@ -57,36 +58,21 @@ export default function LandingPage(props) {
                             avatar={data.aboutMe.avatar}
                         />
                     </Grid>
-                    <Grid item>
-                        <FlareIcon/>
-                    </Grid>
+                    <SectionSpacer />
                     <Grid item className={classNames(classes.padding, classes.baseBackground)}>
                         <Qualifications
                             qualifications={data.qualifications}
                             specialities={data.specialities}
                         />
                     </Grid>
-                    <Grid item>
-                        <FlareIcon/>
-                    </Grid>
+                    <SectionSpacer />
                     <Grid item className={classNames(classes.padding, classes.baseBackground)}>
                         <TreatmentApproach
                             treatmentApproach={data.treatmentApproach}
                             languages={data.languages}
                         />
                     </Grid>
-                    <Grid item className={classNames(classes.padding, classes.baseBackground)}>
-                        <Grid
-                            container
-                            direction={"column"}
-                            justify={"center"}
-                            alignItems={"center"}
-                        >
-                            <Grid item>
-                                <FlareIcon style={{margin: "0 auto"}}/>
-                            </Grid>
-                        </Grid>
-                    </Grid>
+                    <SectionSpacer />
                     <Grid item className={classNames(classes.padding, classes.baseBackground)}>
                         <GeneralInfo
                             header={data.generalInfo.header}
