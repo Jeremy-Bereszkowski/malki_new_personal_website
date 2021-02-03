@@ -13,6 +13,9 @@ import {sectionHeight} from "assets/jss/coreStyles";
 
 const useStyles = makeStyles(theme => ({
     sectionHeight,
+    margin: {
+        margin: "2.5vh 0"
+    },
     container: {
         maxWidth: "90%",
     },
@@ -44,7 +47,7 @@ export default function ProfessionalProfile(props) {
             justify={"center"}
             alignItems={"center"}
             alignContent={"center"}
-            className={classes.sectionHeight}
+            className={classNames(classes.sectionHeight, classes.margin)}
         >
             <Grid item md={8}>
                 <Flip left>
