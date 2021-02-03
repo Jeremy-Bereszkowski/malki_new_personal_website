@@ -10,6 +10,7 @@ import ParallaxLayout from "layouts/ParallaxLayout";
 import ProfessionalProfile from "page-sections/landing-page/ProfessionalProfile";
 import Qualifications from "page-sections/landing-page/Qualifications";
 import TreatmentApproach from "page-sections/landing-page/TreatmentApproach";
+import GeneralInfo from "page-sections/landing-page/GeneralInfo";
 
 import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 import data from "assets/data/pages/landing-data"
@@ -64,6 +65,12 @@ export default function LandingPage(props) {
                         <TreatmentApproach
                             treatmentApproach={data.treatmentApproach}
                             languages={data.languages}
+                        />
+                    </Grid>
+                    <Grid item className={classNames(classes.padding, classes.baseBackground)}>
+                        <GeneralInfo
+                            header={data.generalInfo.header}
+                            para={data.generalInfo.para}
                         />
                     </Grid>
                 </Grid>
