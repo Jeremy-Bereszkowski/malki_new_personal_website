@@ -45,36 +45,31 @@ export default function ProfessionalProfile(props) {
             className={classNames(classes.sectionHeight, classes.margin)}
         >
             <Grid item md={8}>
-                    <Grid
-                        container
-                        direction={"column"}
-                        justify={"center"}
-                        alignItems={"flex-start"}
-                        alignContent={"center"}
-                        style={{paddingRight: "60px"}}
-                    >
-                        <Grid item className={classes.container}>
-                            <h3>
-                                {data.header}
-                            </h3>
-                        </Grid>
-                        <Grid item className={classes.container}>
-                            <h4>
-                                {data.subHeader}
-                            </h4>
-                        </Grid>
-                        <Grid item className={classes.container}>
-                            <br/>
-                            <br/>
-                        </Grid>
-                        {para}
+                <Grid
+                    container
+                    direction={"column"}
+                    justify={"center"}
+                    alignItems={"flex-start"}
+                    alignContent={"center"}
+                    style={{paddingRight: "60px"}}
+                >
+                    <Grid item className={classes.container}>
+                        <h3>
+                            {data.header}
+                        </h3>
                     </Grid>
+                    <Grid item className={classes.container}>
+                        <br/>
+                        <br/>
+                    </Grid>
+                    {para}
+                </Grid>
             </Grid>
             <Grid item>
-                    <Avatar
-                        src={avatar}
-                        className={classes.large}
-                    />
+                <Avatar
+                    src={avatar}
+                    className={classes.large}
+                />
             </Grid>
         </Grid>
     )
