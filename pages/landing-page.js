@@ -7,7 +7,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import HeaderFooterLayout from "layouts/HeaderFooterLayout";
 import ParallaxLayout from "layouts/ParallaxLayout";
 
-import AboutMe from "page-sections/landing-page/AboutMe";
+import ProfessionalProfile from "page-sections/landing-page/ProfessionalProfile";
 
 import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 import data from "assets/data/pages/landing-data"
@@ -47,9 +47,7 @@ export default function LandingPage(props) {
                     alignItems="stretch"
                 >
                     <Grid item className={classNames(classes.padding, classes.baseBackground)}>
-                        <AboutMe
-                            header={data.aboutMe.header}
-                            subHeader={data.aboutMe.subHeader}
+                        <ProfessionalProfile
                             data={data.aboutMe.about}
                             avatar={data.aboutMe.avatar}
                         />
