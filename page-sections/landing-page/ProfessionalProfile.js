@@ -11,7 +11,7 @@ import {sectionHeight} from "assets/jss/coreStyles";
 const useStyles = makeStyles(theme => ({
     sectionHeight,
     margin: {
-        margin: "2.5vh 0",
+        margin: "2.5vh auto",
         maxWidth: "85%",
     },
     container: {
