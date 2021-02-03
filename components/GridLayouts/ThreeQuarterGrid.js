@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 import {Grid} from "@material-ui/core";
 
 export default function ThreeQuarterGrid(props) {
-    const {leftPanel, rightPanel, rootClassName} = props
+    const {leftPanel, rightPanel, rootClassName, alignCenter} = props
+    const align = alignCenter ? "center" : "flex-start"
 
     return (
         <Grid
@@ -13,7 +14,7 @@ export default function ThreeQuarterGrid(props) {
             direction={"row"}
             justify={"space-between"}
             alignContent={"center"}
-            alignItems={"center"}
+            alignItems={align}
             className={rootClassName}
         >
             <Grid item xs={12} md={8}>
@@ -26,10 +27,13 @@ export default function ThreeQuarterGrid(props) {
     )
 }
 
-ThreeQuarterGrid.defaultProps = {}
+ThreeQuarterGrid.defaultProps = {
+    alignCenter: false
+}
 
 ThreeQuarterGrid.propTypes = {
-    leftPanel: PropTypes.object,
-    rightPanel: PropTypes.object,
+    leftPanel: PropTypes.object.isRequired,
+    rightPanel: PropTypes.object.isRequired,
     rootClassName: PropTypes.string,
+    alignCenter: PropTypes.bool,
 }

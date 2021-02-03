@@ -68,6 +68,7 @@ export default function ProfessionalProfile(props) {
             leftPanel={leftPanel}
             rightPanel={rightPanel}
             rootClassName={classNames(classes.sectionHeight, classes.margin)}
+            alignCenter={true}
         />
     )
 }
