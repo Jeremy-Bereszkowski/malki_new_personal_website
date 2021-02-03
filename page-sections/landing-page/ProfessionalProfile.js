@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
         margin: "2.5vh 0"
     },
     container: {
-        maxWidth: "90%",
+        maxWidth: "85%",
     },
     large: {
         width: theme.spacing(30),
