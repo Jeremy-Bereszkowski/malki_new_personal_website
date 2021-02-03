@@ -8,9 +8,13 @@ import {grayColor, whiteColor} from "assets/jss/nextjs-material-kit-pro";
 import FooterData from "assets/data/components/footer";
 
 const useStyles = makeStyles({
+    footerWidth: {
+        maxWidth: "90%",
+        margin: "0 auto",
+    },
     footer: {
-        paddingTop: "40px",
-        paddingBottom: "40px",
+        paddingTop: "20px",
+        paddingBottom: "20px",
         paddingRight: "25px",
         paddingLeft: "25px",
         width: "100%",
@@ -62,30 +66,22 @@ export default function Footer() {
                 container
                 spacing={3}
                 direction={"row"}
-                justify={"space-around"}
+                justify={"space-between"}
                 alignContent={"center"}
                 alignItems={"center"}
+                className={classes.footerWidth}
             >
                 <Grid item xs={12} md={3}>
                     <Grid
                         container
                         direction={"column"}
-                        justify={"center"}
-                        alignItems={"center"}
+                        justify={"flex-start"}
+                        alignItems={"flex-start"}
                     >
                         <Grid item>
-                            <Grid
-                                container
-                                direction={"column"}
-                                justify={"flex-start"}
-                                alignItems={"flex-start"}
-                            >
-                                <Grid item>
-                                    <h3 className={classes.footerBrand}>
-                                        {FooterData.left.header}
-                                    </h3>
-                                </Grid>
-                            </Grid>
+                            <h3 className={classes.footerBrand}>
+                                {FooterData.left.header}
+                            </h3>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -93,31 +89,22 @@ export default function Footer() {
                     <Grid
                         container
                         direction={"column"}
-                        justify={"center"}
-                        alignItems={"center"}
+                        justify={"flex-end"}
+                        alignItems={"flex-end"}
                     >
                         <Grid item>
-                            <Grid
-                                container
-                                direction={"column"}
-                                justify={"flex-end"}
-                                alignItems={"flex-end"}
-                            >
-                                <Grid item>
-                                    <a href={"mailto:"+FooterData.right.email}>
-                                        <h4 className={classes.footerBrand}>
-                                            {FooterData.right.email}
-                                        </h4>
-                                    </a>
-                                </Grid>
-                                <Grid item>
-                                    <a href={"tel:"+FooterData.right.phone}>
-                                        <h4 className={classes.footerBrand}>
-                                            {FooterData.right.phone}
-                                        </h4>
-                                    </a>
-                                </Grid>
-                            </Grid>
+                            <a href={"mailto:"+FooterData.right.email}>
+                                <h4 className={classes.footerBrand}>
+                                    {FooterData.right.email}
+                                </h4>
+                            </a>
+                        </Grid>
+                        <Grid item>
+                            <a href={"tel:"+FooterData.right.phone}>
+                                <h4 className={classes.footerBrand}>
+                                    {FooterData.right.phone}
+                                </h4>
+                            </a>
                         </Grid>
                     </Grid>
                 </Grid>
