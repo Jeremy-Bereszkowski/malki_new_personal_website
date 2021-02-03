@@ -27,16 +27,16 @@ const useStyles = makeStyles(theme => ({
  * @constructor
  */
 export default function TreatmentApproach(props) {
-    const {qualifications, specialities} = props
+    const {treatmentApproach, languages} = props
     const classes = useStyles()
 
-    const leftPara = qualifications.para.map((ele, key) => (
+    const leftPara = treatmentApproach.para.map((ele, key) => (
         <h5 key={key}>
             {ele}
         </h5>
     ))
 
-    const rightPara = specialities.para.map((ele, key) => (
+    const rightPara = languages.para.map((ele, key) => (
         <li key={key}>
             {ele}
         </li>
@@ -45,7 +45,7 @@ export default function TreatmentApproach(props) {
     const leftPanel = (
         <div className={classes.textMargin}>
             <h3>
-                {qualifications.header}
+                {treatmentApproach.header}
             </h3>
             <br/>
             <br/>
@@ -56,7 +56,7 @@ export default function TreatmentApproach(props) {
     const rightPanel = (
         <div>
             <h3>
-                {specialities.header}
+                {languages.header}
             </h3>
             <br/>
             <br/>
@@ -76,6 +76,6 @@ export default function TreatmentApproach(props) {
 }
 
 TreatmentApproach.propTypes = {
-    qualifications: PropTypes.object.isRequired,
-    specialities: PropTypes.object.isRequired,
+    treatmentApproach: PropTypes.object.isRequired,
+    languages: PropTypes.object.isRequired,
 }
