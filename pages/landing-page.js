@@ -8,6 +8,7 @@ import HeaderFooterLayout from "layouts/HeaderFooterLayout";
 import ParallaxLayout from "layouts/ParallaxLayout";
 
 import ProfessionalProfile from "page-sections/landing-page/ProfessionalProfile";
+import Qualifications from "page-sections/landing-page/Qualifications";
 
 import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 import data from "assets/data/pages/landing-data"
@@ -50,6 +51,18 @@ export default function LandingPage(props) {
                         <ProfessionalProfile
                             data={data.aboutMe.about}
                             avatar={data.aboutMe.avatar}
+                        />
+                    </Grid>
+                    <Grid item className={classNames(classes.padding, classes.baseBackground)}>
+                        <Qualifications
+                            qualifications={data.qualifications}
+                            specialities={data.specialities}
+                        />
+                    </Grid>
+                    <Grid item className={classNames(classes.padding, classes.baseBackground)}>
+                        <Qualifications
+                            qualifications={data.qualifications}
+                            specialities={data.specialities}
                         />
                     </Grid>
                 </Grid>
