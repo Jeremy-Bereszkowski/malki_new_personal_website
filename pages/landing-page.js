@@ -48,8 +48,6 @@ export default function LandingPage(props) {
                 >
                     <Grid item className={classNames(classes.padding, classes.baseBackground)}>
                         <ProfessionalProfile
-                            header={data.aboutMe.header}
-                            subHeader={data.aboutMe.subHeader}
                             data={data.aboutMe.about}
                             avatar={data.aboutMe.avatar}
                         />

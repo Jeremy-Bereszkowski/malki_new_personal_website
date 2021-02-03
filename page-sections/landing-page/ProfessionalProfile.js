@@ -15,15 +15,26 @@ const useStyles = makeStyles(theme => ({
         maxWidth: "85%",
     },
     container: {
-        maxWidth: "75%",
+        maxWidth: "80%",
+    },
+    textMargin: {
+        paddingRight: "60px",
     },
     large: {
         width: theme.spacing(28),
         height: theme.spacing(28),
-        margin: "2.5vh 0 2.5vh auto",
-    }
+        margin: "2.5vh auto 2.5vh auto",
+    },
 }))
 
+
+/**
+ * Professional Profile Page Section Component
+ *
+ * @param props
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function ProfessionalProfile(props) {
     const {data, avatar} = props
     const classes = useStyles()
@@ -52,7 +63,7 @@ export default function ProfessionalProfile(props) {
                     justify={"center"}
                     alignItems={"flex-start"}
                     alignContent={"center"}
-                    style={{paddingRight: "60px"}}
+                    className={classes.textMargin}
                 >
                     <Grid item>
                         <h3>
