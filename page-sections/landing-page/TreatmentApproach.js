@@ -6,7 +6,7 @@ import {makeStyles} from "@material-ui/core/styles"
 
 import {sectionHeight} from "assets/jss/coreStyles";
 import ThreeQuarterGrid from "../../components/GridLayouts/ThreeQuarterGrid";
-import HeaderBody from "../../components/GridLayouts/HeaderBody";
+import HeaderParaArray from "../../components/GridLayouts/HeaderParaArray";
 
 const useStyles = makeStyles(theme => ({
     sectionHeight,
@@ -33,7 +33,7 @@ export default function TreatmentApproach(props) {
 
     const leftPanel = (
         <div className={classes.textMargin}>
-            <HeaderBody
+            <HeaderParaArray
                 header={treatmentApproach.header}
                 para={treatmentApproach.para}
                 centerText={false}
@@ -44,7 +44,7 @@ export default function TreatmentApproach(props) {
 
     const rightPanel = (
         <div>
-            <HeaderBody
+            <HeaderParaArray
                 header={languages.header}
                 para={languages.para}
                 centerText={false}

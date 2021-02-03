@@ -5,7 +5,7 @@ import {makeStyles} from "@material-ui/core/styles"
 
 import Grid from "@material-ui/core/Grid";
 import {sectionHeight} from "../../assets/jss/coreStyles";
-import HeaderBody from "../../components/GridLayouts/HeaderBody";
+import HeaderParaArray from "../../components/GridLayouts/HeaderParaArray";
 
 const useStyles = makeStyles({
     root: {
@@ -36,7 +36,7 @@ export default function GeneralInfo(props) {
             className={classes.root}
         >
             <Grid item>
-                <HeaderBody
+                <HeaderParaArray
                     header={header}
                     para={para}
                     centerText={true}
