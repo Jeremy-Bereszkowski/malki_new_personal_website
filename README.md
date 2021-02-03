@@ -1,2 +1,2 @@
-# malki_new_personal_website
+# Malki New
 Personal Website of Malki New
