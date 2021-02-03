@@ -71,7 +71,7 @@ export default function Footer() {
                 alignItems={"center"}
                 className={classes.footerWidth}
             >
-                <Grid item xs={12} md={3}>
+                <Grid item xs={12} md={4}>
                     <Grid
                         container
                         direction={"column"}
@@ -85,7 +85,7 @@ export default function Footer() {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={12} md={3}>
+                <Grid item xs={12} md={4}>
                     <Grid
                         container
                         direction={"column"}
