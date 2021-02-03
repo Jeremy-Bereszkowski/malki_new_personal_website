@@ -10,7 +10,6 @@ export default function HeaderFooterLayout(props) {
 
     return (
         <>
-            <LandingHeader />
             <div style={{
                 backgroundColor: "#DFDBE5",
                 backgroundImage: "url("+topography+")",
