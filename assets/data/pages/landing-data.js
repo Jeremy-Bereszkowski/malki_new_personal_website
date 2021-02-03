@@ -14,8 +14,6 @@ const LandingData = {
         background: lighthouseBackground,
     },
     aboutMe: {
-        header: "Professional Profile",
-        subHeader: "A snapshot of myself",
         about: {
             header: `My name is ${fullName},`,
             subHeader: "I am a Family Therapist & Counsellor ",
