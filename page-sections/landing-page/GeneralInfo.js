@@ -3,19 +3,16 @@ import PropTypes from "prop-types"
 
 import {makeStyles} from "@material-ui/core/styles"
 
-import {sectionHeight} from "assets/jss/coreStyles";
 import Grid from "@material-ui/core/Grid";
 
-const useStyles = makeStyles(theme => ({
-    sectionHeight,
-    margin: {
-        margin: "2.5vh auto",
-        maxWidth: "85%",
+const useStyles = makeStyles({
+    root: {
+        marginBottom: "2.5vh"
     },
-    textMargin: {
-        paddingRight: "60px",
+    centerText: {
+        textAlign: "center"
     },
-}))
+})
 
 
 /**
@@ -30,9 +27,9 @@ export default function GeneralInfo(props) {
     const classes = useStyles()
 
     const paraArray = para.map((ele, key) => (
-        <h5 key={key}>
+        <h4 key={key} className={classes.centerText}>
             {ele}
-        </h5>
+        </h4>
     ))
 
     return (
@@ -41,10 +38,13 @@ export default function GeneralInfo(props) {
             direction={"column"}
             justify={"center"}
             alignItems={"center"}
+            className={classes.root}
         >
             <Grid item>
-                <h3>
-                    {header}
+                <h3 className={classes.centerText}>
+                    <b>
+                        {header}
+                    </b>
                 </h3>
                 <br/>
                 <br/>
