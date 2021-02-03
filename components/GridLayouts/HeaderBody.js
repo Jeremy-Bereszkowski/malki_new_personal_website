@@ -10,7 +10,6 @@ import Colours from "../../assets/strings/colours";
 
 const useStyles = makeStyles(theme => ({
     sectionHeaderText,
-    sectionSubHeaderText,
     container: {
         maxWidth: "1600px",
         margin: "0 auto",
@@ -26,12 +25,25 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-export default function HeaderSubHeaderBody(props) {
-    const {header, subHeader, headerColor, children} = props
+export default function HeaderBody(props) {
+    const {header, headerColor, children} = props
     const classes = useStyles()
 
-    const headerClass = headerColor === "light" ? classNames(classes.sectionHeaderText, classes.light) : headerColor === "green" ? classNames(classes.sectionHeaderText, classes.green) : headerColor === "ternary" ? classNames(classes.sectionHeaderText, classes.ternary) : classes.sectionHeaderText
-    const subHeaderClass = headerColor === "light" ? classNames(classes.sectionSubHeaderText, classes.light) : headerColor === "green" ? classNames(classes.sectionSubHeaderText, classes.green) : headerColor === "ternary" ? classNames(classes.sectionSubHeaderText, classes.ternary) : classes.sectionSubHeaderText
+    let headerClass;
+    switch (headerColor) {
+        case "light":
+            headerClass = classNames(classes.sectionHeaderText, classes.light);
+            break;
+        case "green":
+            headerClass = classNames(classes.sectionHeaderText, classes.green);
+            break;
+        case "ternary":
+            headerClass = classNames(classes.sectionHeaderText, classes.ternary)
+            break;
+        default:
+            headerClass = classes.sectionHeaderText
+            break;
+    }
 
     return (
         <Grid
@@ -47,11 +59,6 @@ export default function HeaderSubHeaderBody(props) {
                 </h1>
             </Grid>
             <Grid item>
-                <h2 className={subHeaderClass}>
-                    {subHeader}
-                </h2>
-            </Grid>
-            <Grid item>
                 <br/>
             </Grid>
             <Grid item>
@@ -61,11 +68,11 @@ export default function HeaderSubHeaderBody(props) {
     )
 }
 
-HeaderSubHeaderBody.defaultProp = {
+HeaderBody.defaultProp = {
     headerColor: "dark",
 }
 
-HeaderSubHeaderBody.propTypes = {
+HeaderBody.propTypes = {
     children: PropTypes.node,
     header: PropTypes.string,
     subHeader: PropTypes.string,

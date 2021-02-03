@@ -7,7 +7,7 @@ import {makeStyles} from "@material-ui/core/styles"
 import {Grid} from "@material-ui/core";
 import Avatar from "@material-ui/core/Avatar";
 
-import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
+import HeaderBody from "components/GridLayouts/HeaderBody";
 
 import useIsTouchDevice from "util/device-detect";
 
@@ -40,7 +40,7 @@ export default function AboutMe(props) {
     ))
 
     return (
-        <HeaderSubHeaderBody
+        <HeaderBody
             header={header}
             subHeader={subHeader}
         >
@@ -93,7 +93,7 @@ export default function AboutMe(props) {
                     </Roll>
                 </Grid>
             </Grid>
-        </HeaderSubHeaderBody>
+        </HeaderBody>
     )
 }
 
