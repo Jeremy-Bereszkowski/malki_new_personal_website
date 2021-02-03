@@ -12,6 +12,7 @@ const useStyles = makeStyles(theme => ({
     sectionHeight,
     margin: {
         margin: "2.5vh 0"
+        maxWidth: "85%",
     },
     container: {
         maxWidth: "85%",
@@ -28,7 +29,7 @@ export default function ProfessionalProfile(props) {
     const classes = useStyles()
 
     const para = data.para.map((ele, key) => (
-        <Grid item key={key} className={classes.container}>
+        <Grid item key={key}>
             <h5>
                 {ele}
             </h5>
@@ -53,12 +54,12 @@ export default function ProfessionalProfile(props) {
                     alignContent={"center"}
                     style={{paddingRight: "60px"}}
                 >
-                    <Grid item className={classes.container}>
+                    <Grid item>
                         <h3>
                             {data.header}
                         </h3>
                     </Grid>
-                    <Grid item className={classes.container}>
+                    <Grid item>
                         <br/>
                         <br/>
                     </Grid>
