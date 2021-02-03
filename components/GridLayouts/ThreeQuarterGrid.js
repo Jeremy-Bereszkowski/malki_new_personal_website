@@ -1,15 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import {makeStyles} from "@material-ui/core/styles"
 import {Grid} from "@material-ui/core";
-import FooterData from "../../assets/data/components/footer";
-
-const useStyles = makeStyles(theme => ({}))
 
 export default function ThreeQuarterGrid(props) {
     const {leftPanel, rightPanel, rootClassName} = props
-    const classes = useStyles()
 
     return (
         <Grid

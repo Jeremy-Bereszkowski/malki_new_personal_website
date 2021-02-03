@@ -3,7 +3,6 @@ import classNames from "classnames"
 import PropTypes from "prop-types"
 
 import {makeStyles} from "@material-ui/core/styles"
-import {Grid} from "@material-ui/core";
 import Avatar from "@material-ui/core/Avatar";
 
 import {sectionHeight} from "assets/jss/coreStyles";
@@ -41,33 +40,20 @@ export default function ProfessionalProfile(props) {
     const classes = useStyles()
 
     const para = data.para.map((ele, key) => (
-        <Grid item key={key}>
-            <h5>
-                {ele}
-            </h5>
-        </Grid>
+        <h5 key={key}>
+            {ele}
+        </h5>
     ))
 
     const leftPanel = (
-        <Grid
-            container
-            direction={"column"}
-            justify={"center"}
-            alignItems={"flex-start"}
-            alignContent={"center"}
-            className={classes.textMargin}
-        >
-            <Grid item>
-                <h3>
-                    {data.header}
-                </h3>
-            </Grid>
-            <Grid item>
-                <br/>
-                <br/>
-            </Grid>
+        <div className={classes.textMargin}>
+            <h3>
+                {data.header}
+            </h3>
+            <br/>
+            <br/>
             {para}
-        </Grid>
+        </div>
     )
 
     const rightPanel = (
@@ -87,8 +73,6 @@ export default function ProfessionalProfile(props) {
 }
 
 ProfessionalProfile.propTypes = {
-    header: PropTypes.string.isRequired,
-    subHeader: PropTypes.string.isRequired,
     data: PropTypes.object,
     avatar: PropTypes.string,
 }
