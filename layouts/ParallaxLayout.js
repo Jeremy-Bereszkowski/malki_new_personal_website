@@ -6,8 +6,7 @@ import Grid from "@material-ui/core/Grid";
 
 import Parallax from "components/Parallax/Parallax";
 
-import {greenHrThick, parallaxHeaderText} from "assets/jss/coreStyles";
-import {parallaxSubHeaderText} from "assets/jss/coreStyles";
+import {extraSmallFont, largeFont} from "assets/jss/coreStyles";
 import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
@@ -24,16 +23,28 @@ const useStyles = makeStyles({
         border: "solid 2px " + Colours.primary
     },
     title: {
-        ...parallaxHeaderText,
+        ...largeFont,
+        fontWeight: "700",
+        color: Colours.white,
+        textDecoration: "none",
+        textTransform: "uppercase",
+        textAlign: "center",
         marginTop: "30px",
         minHeight: "32px",
     },
     titleSubHeading: {
-        ...parallaxSubHeaderText,
+        ...extraSmallFont,
+        fontWeight: "350",
+        color: Colours.white,
+        textDecoration: "none",
+        textTransform: "uppercase",
+        textAlign: "center",
         margin: "0",
     },
     greenHr: {
-        ...greenHrThick,
+        borderTop: "7px solid " + Colours.secondary,
+        marginLeft: "10%",
+        marginRight: "10%",
     },
 })
 
