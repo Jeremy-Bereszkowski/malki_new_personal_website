@@ -35,7 +35,7 @@ const useStyles = makeStyles({
  * @returns {JSX.Element}
  * @constructor
  */
-export default function LandingPage(props) {
+export default function LandingPage() {
     React.useEffect(() => {
         window.scrollTo(0, 0);
         document.body.scrollTop = 0;

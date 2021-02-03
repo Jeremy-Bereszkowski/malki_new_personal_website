@@ -7,7 +7,7 @@ import FlareIcon from "@material-ui/icons/Flare";
 
 import {grayColor} from "../../assets/jss/nextjs-material-kit-pro";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme=>({
     padding: {
         padding: "4vh 0",
         display: "absolute",
@@ -16,9 +16,13 @@ const useStyles = makeStyles({
     baseBackground: {
         backgroundColor: grayColor[14],
     },
-})
+    large: {
+        width: theme.spacing(3.75),
+        height: theme.spacing(3.75),
+    },
+}))
 
-export default function SectionSpacer(props) {
+export default function SectionSpacer() {
     const classes = useStyles()
 
     return (
@@ -30,7 +34,7 @@ export default function SectionSpacer(props) {
                 alignItems={"center"}
             >
                 <Grid item>
-                    <FlareIcon style={{margin: "0 auto"}}/>
+                    <FlareIcon className={classes.large}/>
                 </Grid>
             </Grid>
         </Grid>
