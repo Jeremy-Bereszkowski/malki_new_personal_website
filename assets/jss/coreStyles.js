@@ -1,5 +1,4 @@
 import Colours from "../strings/colours";
-import {whiteColor} from "./nextjs-material-kit-pro";
 
 const extraSmallFont = {
     fontSize: "calc(16px + (20 - 16) * ((100vw - 300px) / (3000 - 300)))"
@@ -16,7 +15,7 @@ const largeFont = {
 const parallaxHeaderText = {
     ...largeFont,
     fontWeight: "700",
-    color: whiteColor,
+    color: Colours.white,
     textDecoration: "none",
     textTransform: "uppercase",
     textAlign: "center",
@@ -25,7 +24,7 @@ const parallaxHeaderText = {
 const parallaxSubHeaderText = {
     ...extraSmallFont,
     fontWeight: "350",
-    color: whiteColor,
+    color: Colours.white,
     textDecoration: "none",
     textTransform: "uppercase",
     textAlign: "center",

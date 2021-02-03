@@ -14,8 +14,8 @@ import GeneralInfo from "page-sections/landing-page/GeneralInfo";
 
 import SectionSpacer from "components/Icons/SectionSpacer";
 
-import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 import data from "assets/data/pages/landing-data"
+import Colours from "../assets/strings/colours";
 
 const useStyles = makeStyles({
     padding: {
@@ -24,7 +24,7 @@ const useStyles = makeStyles({
         zIndex: "7",
     },
     baseBackground: {
-        backgroundColor: grayColor[14],
+        backgroundColor: Colours.grayColor[14],
     },
 });
 

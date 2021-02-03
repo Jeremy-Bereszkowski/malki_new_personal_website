@@ -5,7 +5,7 @@ import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import FlareIcon from "@material-ui/icons/Flare";
 
-import {grayColor} from "../../assets/jss/nextjs-material-kit-pro";
+import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles(theme=>({
     padding: {
@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme=>({
         zIndex: "7",
     },
     baseBackground: {
-        backgroundColor: grayColor[14],
+        backgroundColor: Colours.grayColor[14],
     },
     large: {
         width: theme.spacing(3.75),
