@@ -10,6 +10,9 @@ const useStyles = makeStyles({
     centerText: {
         textAlign: "center"
     },
+    listRoot: {
+        listStylePosition: 'outside'
+    },
 })
 
 export default function HeaderParaArray(props) {
@@ -28,7 +31,11 @@ export default function HeaderParaArray(props) {
             {ele}
         </li>
     ))
-    const paraRender = list ? listArray : paraArray
+    const paraRender = list ? (
+        <ul className={classes.listRoot}>
+            {listArray}
+        </ul>
+    ) : paraArray
 
     const headerRender = boldHeader ? (
         <h3 className={textAlign}>
