@@ -3,7 +3,7 @@ import {fullName} from "../global";
 const FooterData = {
     left: {
         header: fullName,
-        subHeader: "Family Therapist & Counsellor",
+        subHeader: "Practice located in Windsor, Melbourne",
     },
     right: {
         email: "Email:",

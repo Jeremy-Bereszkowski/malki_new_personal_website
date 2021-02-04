@@ -6,6 +6,7 @@ import {makeStyles} from "@material-ui/core/styles"
 
 import ThreeQuarterGrid from "components/GridLayouts/ThreeQuarterGrid";
 import HeaderParaArray from "components/GridLayouts/HeaderParaArray";
+import HiddenContainer from "components/GridLayouts/HiddenContainer";
 
 import {sectionHeight} from "assets/jss/coreStyles";
 
@@ -14,9 +15,6 @@ const useStyles = makeStyles({
     margin: {
         margin: "2.5vh auto",
         maxWidth: "85%",
-    },
-    textMargin: {
-        paddingRight: "60px",
     },
 })
 
@@ -32,15 +30,21 @@ export default function Qualifications(props) {
     const {qualifications, specialities} = props
     const classes = useStyles()
 
+    const leftPanelContent = (
+        <HeaderParaArray
+            header={qualifications.header}
+            para={qualifications.para}
+            centerText={false}
+            boldHeader={true}
+        />
+    )
+
     const leftPanel = (
-        <div className={classes.textMargin}>
-            <HeaderParaArray
-                header={qualifications.header}
-                para={qualifications.para}
-                centerText={false}
-                boldHeader={true}
-            />
-        </div>
+        <HiddenContainer
+            smallPanel={leftPanelContent}
+            largePanel={leftPanelContent}
+            dynamicSized={true}
+        />
     )
 
     const rightPanel = (

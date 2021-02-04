@@ -9,15 +9,13 @@ import ThreeQuarterGrid from "components/GridLayouts/ThreeQuarterGrid";
 import HeaderParaArray from "components/GridLayouts/HeaderParaArray";
 
 import {sectionHeight} from "assets/jss/coreStyles";
+import HiddenContainer from "../../components/GridLayouts/HiddenContainer";
 
 const useStyles = makeStyles(theme => ({
     sectionHeight,
     margin: {
         margin: "2.5vh auto",
         maxWidth: "85%",
-    },
-    textMargin: {
-        paddingRight: "60px",
     },
     large: {
         width: theme.spacing(28),
@@ -38,15 +36,21 @@ export default function ProfessionalProfile(props) {
     const {data, avatar} = props
     const classes = useStyles()
 
+    const leftPanelContent = (
+        <HeaderParaArray
+            header={data.header}
+            para={data.para}
+            centerText={false}
+            boldHeader={true}
+        />
+    )
+
     const leftPanel = (
-        <div className={classes.textMargin}>
-            <HeaderParaArray
-                header={data.header}
-                para={data.para}
-                centerText={false}
-                boldHeader={true}
-            />
-        </div>
+        <HiddenContainer
+            smallPanel={leftPanelContent}
+            largePanel={leftPanelContent}
+            dynamicSized={true}
+        />
     )
 
     const rightPanel = (

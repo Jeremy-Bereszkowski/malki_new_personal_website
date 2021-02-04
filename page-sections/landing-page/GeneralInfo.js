@@ -5,6 +5,7 @@ import {makeStyles} from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid";
 
 import HeaderParaArray from "components/GridLayouts/HeaderParaArray";
+import HiddenContainer from "components/GridLayouts/HiddenContainer";
 
 import {sectionHeight} from "assets/jss/coreStyles";
 
@@ -28,6 +29,15 @@ export default function GeneralInfo(props) {
     const {header, para} = props
     const classes = useStyles()
 
+    const panelContent = center => (
+        <HeaderParaArray
+            header={header}
+            para={para}
+            centerText={center}
+            boldHeader={true}
+        />
+    )
+
     return (
         <Grid
             container
@@ -37,11 +47,9 @@ export default function GeneralInfo(props) {
             className={classes.root}
         >
             <Grid item>
-                <HeaderParaArray
-                    header={header}
-                    para={para}
-                    centerText={true}
-                    boldHeader={true}
+                <HiddenContainer
+                    smallPanel={panelContent(false)}
+                    largePanel={panelContent(true)}
                 />
             </Grid>
         </Grid>
