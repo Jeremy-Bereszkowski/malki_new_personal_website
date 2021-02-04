@@ -10,6 +10,9 @@ import DataLink from "../Links/ExternalLink";
 import {email, phone} from "../../assets/data/global";
 
 const useStyles = makeStyles({
+    itemMargin: {
+        margin: "2vh 0"
+    },
     footerWidth: {
         maxWidth: "90%",
         margin: "0 auto",
@@ -74,7 +77,7 @@ export default function Footer() {
             alignItems={"center"}
             className={classes.footerWidth}
         >
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={4} className={classes.itemMargin}>
                 <Grid
                     container
                     direction={"column"}
@@ -93,7 +96,7 @@ export default function Footer() {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={4} className={classes.itemMargin}>
                 <Grid
                     container
                     direction={"column"}
@@ -127,7 +130,7 @@ export default function Footer() {
             alignContent={"center"}
             alignItems={"center"}
         >
-            <Grid item xs={12} sm={12} style={{margin: "2vh 0"}}>
+            <Grid item xs={12} sm={12} className={classes.itemMargin}>
                 <Grid
                     container
                     direction={"column"}
@@ -146,7 +149,7 @@ export default function Footer() {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid item xs={12} sm={12} style={{margin: "2vh 0"}}>
+            <Grid item xs={12} sm={12} className={classes.itemMargin}>
                 <Grid
                     container
                     direction={"column"}
