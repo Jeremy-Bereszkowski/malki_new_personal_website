@@ -28,7 +28,11 @@ export default function HeaderParaArray(props) {
             {ele}
         </li>
     ))
-    const paraRender = list ? listArray : paraArray
+    const paraRender = list ? (
+        <ul style={{listStylePosition: 'outside'}}>
+            {listArray}
+        </ul>
+    ) : paraArray
 
     const headerRender = boldHeader ? (
         <h3 className={textAlign}>
