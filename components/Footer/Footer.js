@@ -4,10 +4,11 @@ import classNames from "classnames";
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid, Hidden} from "@material-ui/core";
 
+import DataLink from "components/Links/ExternalLink";
+
 import FooterData from "assets/data/components/footer";
 import Colours from "assets/strings/colours";
-import DataLink from "../Links/ExternalLink";
-import {email, phone} from "../../assets/data/global";
+import {email, phone} from "assets/data/global";
 
 const useStyles = makeStyles({
     itemMargin: {

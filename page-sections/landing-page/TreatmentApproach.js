@@ -3,6 +3,7 @@ import classNames from "classnames"
 import PropTypes from "prop-types"
 
 import {makeStyles} from "@material-ui/core/styles"
+import {Hidden} from "@material-ui/core";
 
 import ThreeQuarterGrid from "components/GridLayouts/ThreeQuarterGrid";
 import HeaderParaArray from "components/GridLayouts/HeaderParaArray";
@@ -32,15 +33,28 @@ export default function TreatmentApproach(props) {
     const {treatmentApproach, languages} = props
     const classes = useStyles()
 
+    const leftPanelContent = (
+        <HeaderParaArray
+            header={treatmentApproach.header}
+            para={treatmentApproach.para}
+            centerText={false}
+            boldHeader={true}
+        />
+    )
+
     const leftPanel = (
-        <div className={classes.textMargin}>
-            <HeaderParaArray
-                header={treatmentApproach.header}
-                para={treatmentApproach.para}
-                centerText={false}
-                boldHeader={true}
-            />
-        </div>
+        <>
+            <Hidden only={['md', "lg", 'xl']}>
+                <div>
+                    {leftPanelContent}
+                </div>
+            </Hidden>
+            <Hidden only={['xs', "sm"]}>
+                <div className={classes.textMargin}>
+                    {leftPanelContent}
+                </div>
+            </Hidden>
+        </>
     )
 
     const rightPanel = (
