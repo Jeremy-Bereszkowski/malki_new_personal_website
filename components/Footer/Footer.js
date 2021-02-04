@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 
 import {makeStyles} from "@material-ui/core/styles";
-import {Grid} from "@material-ui/core";
+import {Grid, Hidden} from "@material-ui/core";
 
 import FooterData from "assets/data/components/footer";
 import Colours from "assets/strings/colours";
@@ -65,60 +65,121 @@ export default function Footer() {
         [classes["dark"]]: true,
     });
 
-    return (
-        <footer className={footerClasses}>
-            <Grid
-                container
-                spacing={3}
-                direction={"row"}
-                justify={"space-between"}
-                alignContent={"center"}
-                alignItems={"center"}
-                className={classes.footerWidth}
-            >
-                <Grid item xs={12} md={4}>
-                    <Grid
-                        container
-                        direction={"column"}
-                        justify={"flex-start"}
-                        alignItems={"flex-start"}
-                    >
-                        <Grid item>
-                            <h3 className={classes.footerBrand}>
-                                {FooterData.left.header}
-                            </h3>
-                        </Grid>
-                        <Grid item>
-                            <h4 className={classes.footerBrand}>
-                                {FooterData.left.subHeader}
-                            </h4>
-                        </Grid>
+    const leftRightContainer = (
+        <Grid
+            container
+            direction={"row"}
+            justify={"space-between"}
+            alignContent={"center"}
+            alignItems={"center"}
+            className={classes.footerWidth}
+        >
+            <Grid item xs={12} md={4}>
+                <Grid
+                    container
+                    direction={"column"}
+                    justify={"flex-start"}
+                    alignItems={"flex-start"}
+                >
+                    <Grid item>
+                        <h3 className={classes.footerBrand}>
+                            {FooterData.left.header}
+                        </h3>
                     </Grid>
-                </Grid>
-                <Grid item xs={12} md={4}>
-                    <Grid
-                        container
-                        direction={"column"}
-                        justify={"flex-end"}
-                        alignItems={"flex-end"}
-                    >
-                        <Grid item>
-                            <DataLink
-                                data={email}
-                                mail={true}
-                                label={FooterData.right.email}
-                            />
-                        </Grid>
-                        <Grid item>
-                            <DataLink
-                                data={phone}
-                                mobile={true}
-                                label={FooterData.right.phone}
-                            />
-                        </Grid>
+                    <Grid item>
+                        <h4 className={classes.footerBrand}>
+                            {FooterData.left.subHeader}
+                        </h4>
                     </Grid>
                 </Grid>
             </Grid>
+            <Grid item xs={12} md={4}>
+                <Grid
+                    container
+                    direction={"column"}
+                    justify={"flex-end"}
+                    alignItems={"flex-end"}
+                >
+                    <Grid item>
+                        <DataLink
+                            data={email}
+                            mail={true}
+                            label={FooterData.right.email}
+                        />
+                    </Grid>
+                    <Grid item>
+                        <DataLink
+                            data={phone}
+                            mobile={true}
+                            label={FooterData.right.phone}
+                        />
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    )
+
+    const centerContainer = (
+        <Grid
+            container
+            direction={"column"}
+            justify={"space-between"}
+            alignContent={"center"}
+            alignItems={"center"}
+        >
+            <Grid item xs={12} sm={12} style={{margin: "2vh 0"}}>
+                <Grid
+                    container
+                    direction={"column"}
+                    justify={"center"}
+                    alignItems={"center"}
+                >
+                    <Grid item>
+                        <h3 className={classes.footerBrand}>
+                            {FooterData.left.header}
+                        </h3>
+                    </Grid>
+                    <Grid item>
+                        <h4 className={classes.footerBrand}>
+                            {FooterData.left.subHeader}
+                        </h4>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid item xs={12} sm={12} style={{margin: "2vh 0"}}>
+                <Grid
+                    container
+                    direction={"column"}
+                    justify={"center"}
+                    alignItems={"center"}
+                >
+                    <Grid item>
+                        <DataLink
+                            data={email}
+                            mail={true}
+                            label={FooterData.right.email}
+                        />
+                    </Grid>
+                    <Grid item>
+                        <DataLink
+                            data={phone}
+                            mobile={true}
+                            label={FooterData.right.phone}
+                        />
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    )
+
+    return (
+        <footer className={footerClasses}>
+            <Hidden only={['md', "lg", 'xl']}>
+                {centerContainer}
+            </Hidden>
+            <Hidden only={['xs', "sm"]}>
+                {leftRightContainer}
+            </Hidden>
         </footer>
     )
 }
