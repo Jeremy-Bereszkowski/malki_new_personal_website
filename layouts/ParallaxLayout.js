@@ -30,6 +30,7 @@ const useStyles = makeStyles({
         textTransform: "uppercase",
         textAlign: "center",
         marginTop: "30px",
+        marginBottom: "-5px",
         minHeight: "32px",
     },
     titleSubHeading: {
@@ -49,9 +50,8 @@ const useStyles = makeStyles({
 })
 
 export default function ParallaxLayout(props) {
-    const classes = useStyles()
-
     const {children, image, header, body} = props
+    const classes = useStyles()
 
     return (
         <>
@@ -63,7 +63,7 @@ export default function ParallaxLayout(props) {
                         justify={"center"}
                         alignContent={"center"}
                     >
-                        <Grid >
+                        <Grid item>
                             <h1 className={classes.title}>{header}</h1>
                         </Grid>
                     </Grid>
