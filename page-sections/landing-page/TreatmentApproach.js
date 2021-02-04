@@ -3,23 +3,20 @@ import classNames from "classnames"
 import PropTypes from "prop-types"
 
 import {makeStyles} from "@material-ui/core/styles"
-import {Hidden} from "@material-ui/core";
 
 import ThreeQuarterGrid from "components/GridLayouts/ThreeQuarterGrid";
 import HeaderParaArray from "components/GridLayouts/HeaderParaArray";
+import HiddenContainer from "components/GridLayouts/HiddenContainer";
 
 import {sectionHeight} from "assets/jss/coreStyles";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
     sectionHeight,
     margin: {
         margin: "2.5vh auto",
         maxWidth: "85%",
     },
-    textMargin: {
-        paddingRight: "60px",
-    },
-}))
+})
 
 
 /**
@@ -43,18 +40,11 @@ export default function TreatmentApproach(props) {
     )
 
     const leftPanel = (
-        <>
-            <Hidden only={['md', "lg", 'xl']}>
-                <div>
-                    {leftPanelContent}
-                </div>
-            </Hidden>
-            <Hidden only={['xs', "sm"]}>
-                <div className={classes.textMargin}>
-                    {leftPanelContent}
-                </div>
-            </Hidden>
-        </>
+        <HiddenContainer
+            smallPanel={leftPanelContent}
+            largePanel={leftPanelContent}
+            dynamicSized={true}
+        />
     )
 
     const rightPanel = (

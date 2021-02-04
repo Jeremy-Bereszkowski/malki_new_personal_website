@@ -5,9 +5,9 @@ import {makeStyles} from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid";
 
 import HeaderParaArray from "components/GridLayouts/HeaderParaArray";
+import HiddenContainer from "components/GridLayouts/HiddenContainer";
 
 import {sectionHeight} from "assets/jss/coreStyles";
-import {Hidden} from "@material-ui/core";
 
 const useStyles = makeStyles({
     root: {
@@ -47,12 +47,10 @@ export default function GeneralInfo(props) {
             className={classes.root}
         >
             <Grid item>
-                <Hidden only={['md', "lg", 'xl']}>
-                    {panelContent(false)}
-                </Hidden>
-                <Hidden only={['xs', "sm"]}>
-                    {panelContent(true)}
-                </Hidden>
+                <HiddenContainer
+                    smallPanel={panelContent(false)}
+                    largePanel={panelContent(true)}
+                />
             </Grid>
         </Grid>
     )

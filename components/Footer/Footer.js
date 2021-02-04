@@ -2,13 +2,14 @@ import React from "react";
 import classNames from "classnames";
 
 import {makeStyles} from "@material-ui/core/styles";
-import {Grid, Hidden} from "@material-ui/core";
+import {Grid} from "@material-ui/core";
 
 import DataLink from "components/Links/ExternalLink";
 
 import FooterData from "assets/data/components/footer";
 import Colours from "assets/strings/colours";
 import {email, phone} from "assets/data/global";
+import HiddenContainer from "../GridLayouts/HiddenContainer";
 
 const useStyles = makeStyles({
     itemMargin: {
@@ -178,12 +179,10 @@ export default function Footer() {
 
     return (
         <footer className={footerClasses}>
-            <Hidden only={['md', "lg", 'xl']}>
-                {centerContainer}
-            </Hidden>
-            <Hidden only={['xs', "sm"]}>
-                {leftRightContainer}
-            </Hidden>
+            <HiddenContainer
+                smallPanel={centerContainer}
+                largePanel={leftRightContainer}
+            />
         </footer>
     )
 }
