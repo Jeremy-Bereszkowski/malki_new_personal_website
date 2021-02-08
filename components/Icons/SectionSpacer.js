@@ -30,7 +30,7 @@ export default function SectionSpacer() {
         <Grid item className={classNames(classes.padding, classes.baseBackground)}>
             <Grid
                 container
-                direction={"column"}
+                direction={"row"}
                 justify={"center"}
                 alignItems={"center"}
             >
