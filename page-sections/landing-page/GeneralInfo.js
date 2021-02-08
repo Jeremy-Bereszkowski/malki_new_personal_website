@@ -42,7 +42,7 @@ export default function GeneralInfo(props) {
         <Grid
             container
             direction={"column"}
-            justify={"center"}
+            justify={"flex-start"}
             alignItems={"center"}
             className={classes.root}
         >
