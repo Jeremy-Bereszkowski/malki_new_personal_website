@@ -4,6 +4,7 @@ import classNames from "classnames";
 import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import FlareIcon from "@material-ui/icons/Flare";
+import ExtensionIcon from '@material-ui/icons/Extension';
 
 import Colours from "assets/strings/colours";
 
@@ -34,7 +35,13 @@ export default function SectionSpacer() {
                 alignItems={"center"}
             >
                 <Grid item>
-                    <FlareIcon className={classes.large}/>
+                    <ExtensionIcon className={classes.large}/>
+                </Grid>
+                <Grid item>
+                    <ExtensionIcon className={classes.large}/>
+                </Grid>
+                <Grid item>
+                    <ExtensionIcon className={classes.large}/>
                 </Grid>
             </Grid>
         </Grid>
