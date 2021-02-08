@@ -60,20 +60,6 @@ export default function GeneralInfo(props) {
             smallPanel={panel("flex-start")}
             largePanel={panel("center")}
         />
-        /*<Grid
-            container
-            direction={"column"}
-            justify={"center"}
-            alignItems={"flex-start"}
-            className={classes.root}
-        >
-            <Grid item>
-                <HiddenContainer
-                    smallPanel={panelContent(false)}
-                    largePanel={panelContent(true)}
-                />
-            </Grid>
-        </Grid>*/
     )
 }
 
