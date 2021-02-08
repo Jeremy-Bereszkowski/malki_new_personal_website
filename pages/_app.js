@@ -36,9 +36,6 @@ export default class MyApp extends App {
 
         return (
             <>
-                {/*<Head>
-                    <title>{headerString}</title>
-                </Head>*/}
                 <DefaultSeo {...SEO} />
                 <Component {...pageProps} />
             </>
