@@ -73,9 +73,9 @@ export default function ParallaxLayout(props) {
                         justify={"center"}
                         alignContent={"stretch"}
                     >
-                        {/*<Grid item>
+                        <Grid item>
                             <hr size={30} className={classes.greenHr}/>
-                        </Grid>*/}
+                        </Grid>
                         <Grid item>
                             <h4 className={classes.titleSubHeading}>
                                 {body}
