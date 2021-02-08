@@ -37,13 +37,16 @@ export default function SectionSpacer() {
                 alignItems={"center"}
             >
                 <Grid item>
-                    <PuzzleIcon/>
+                    <img src={`url(${PuzzleIcon})`}/>
+                    {/*<PuzzleIcon/>*/}
                 </Grid>
                 <Grid item>
-                    <PuzzleIcon/>
+                    <img src={`url(${PuzzleIcon})`}/>
+                    {/*<PuzzleIcon/>*/}
                 </Grid>
                 <Grid item>
-                    <PuzzleIcon/>
+                    <img src={`url(${PuzzleIcon})`}/>
+                    {/*<PuzzleIcon/>*/}
                 </Grid>
             </Grid>
         </Grid>

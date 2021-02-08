@@ -75,7 +75,7 @@ const LandingData = {
         para: [
             "No GP referral required.",
             "Sliding scale of fees.",
-            "Sessions by zoom or video call available in Melbourne, interstate and internationally."
+            "Sessions also available by zoom or video call in Melbourne, interstate and internationally."
         ]
     }
 }
