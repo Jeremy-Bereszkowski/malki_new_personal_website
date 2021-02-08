@@ -19,7 +19,7 @@ import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
     padding: {
-        padding: "4vh 0",
+        padding: "6vh 0",
         display: "absolute",
         zIndex: "7",
     },
