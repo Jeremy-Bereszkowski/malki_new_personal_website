@@ -38,12 +38,12 @@ export default function GeneralInfo(props) {
         />
     )
 
-    return (
+    const panel = (align) => (
         <Grid
             container
             direction={"column"}
             justify={"center"}
-            alignItems={"center"}
+            alignItems={align}
             className={classes.root}
         >
             <Grid item>
@@ -53,6 +53,13 @@ export default function GeneralInfo(props) {
                 />
             </Grid>
         </Grid>
+    )
+
+    return (
+        <HiddenContainer
+            smallPanel={panel("flex-start")}
+            largePanel={panel("center")}
+        />
     )
 }
 
