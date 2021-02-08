@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "next/app";
-import Head from "next/head";
 import Router from "next/router";
+import { DefaultSeo } from 'next-seo';
+
+import SEO from '../next-seo.config';
 
 import PageChange from "components/PageChange/PageChange.js";
 
-import {headerString} from "assets/data/global";
 import "assets/scss/nextjs-material-kit-pro.scss?v=1.1.0";
 import "assets/css/react-demo.css";
 
@@ -35,9 +36,10 @@ export default class MyApp extends App {
 
         return (
             <>
-                <Head>
+                {/*<Head>
                     <title>{headerString}</title>
-                </Head>
+                </Head>*/}
+                <DefaultSeo {...SEO} />
                 <Component {...pageProps} />
             </>
         );
