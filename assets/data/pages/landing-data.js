@@ -10,7 +10,7 @@ const LandingData = {
     core: {
         header: fullName,
         body: "Family Therapist & Counsellor",
-        background: lighthouseBackground,
+        background: footpathBackground,
     },
     aboutMe: {
         about: {
