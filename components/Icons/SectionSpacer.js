@@ -6,6 +6,8 @@ import {makeStyles} from "@material-ui/core/styles";
 import FlareIcon from "@material-ui/icons/Flare";
 import ExtensionIcon from '@material-ui/icons/Extension';
 
+const PuzzleIcon = "/puzzle_icon.png";
+
 import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles(theme=>({
@@ -35,13 +37,13 @@ export default function SectionSpacer() {
                 alignItems={"center"}
             >
                 <Grid item>
-                    <ExtensionIcon className={classes.large}/>
+                    <PuzzleIcon className={classes.large}/>
                 </Grid>
                 <Grid item>
-                    <ExtensionIcon className={classes.large}/>
+                    <PuzzleIcon className={classes.large}/>
                 </Grid>
                 <Grid item>
-                    <ExtensionIcon className={classes.large}/>
+                    <PuzzleIcon className={classes.large}/>
                 </Grid>
             </Grid>
         </Grid>
