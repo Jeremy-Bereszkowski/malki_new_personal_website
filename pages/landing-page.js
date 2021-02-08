@@ -15,7 +15,7 @@ import GeneralInfo from "page-sections/landing-page/GeneralInfo";
 import SectionSpacer from "components/Icons/SectionSpacer";
 
 import data from "assets/data/pages/landing-data"
-import Colours from "../assets/strings/colours";
+import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
     padding: {

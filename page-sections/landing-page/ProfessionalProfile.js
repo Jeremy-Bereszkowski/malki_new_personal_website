@@ -7,9 +7,9 @@ import Avatar from "@material-ui/core/Avatar";
 
 import ThreeQuarterGrid from "components/GridLayouts/ThreeQuarterGrid";
 import HeaderParaArray from "components/GridLayouts/HeaderParaArray";
+import HiddenContainer from "components/GridLayouts/HiddenContainer";
 
 import {sectionHeight} from "assets/jss/coreStyles";
-import HiddenContainer from "../../components/GridLayouts/HiddenContainer";
 
 const useStyles = makeStyles(theme => ({
     sectionHeight,
