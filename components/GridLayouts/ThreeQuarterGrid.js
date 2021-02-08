@@ -10,7 +10,6 @@ export default function ThreeQuarterGrid(props) {
     return (
         <Grid
             container
-            spacing={3}
             direction={"row"}
             justify={"space-between"}
             alignContent={"center"}

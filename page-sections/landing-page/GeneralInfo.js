@@ -38,7 +38,7 @@ export default function GeneralInfo(props) {
         />
     )
 
-    const panel = (align) => (
+    const panel = align => (
         <Grid
             container
             direction={"column"}
