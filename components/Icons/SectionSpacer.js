@@ -21,6 +21,9 @@ const useStyles = makeStyles({
         maxWidth: "35px",
         maxHeight: "35px",
     },
+    italics: {
+        fontStyle: "italic",
+    }
 });
 
 export default function SectionSpacer() {
@@ -53,9 +56,9 @@ export default function SectionSpacer() {
                     </Grid>
                 </Grid>
                 <Grid>
-                    <h5 style={{textDecorationStyle: "wavy", textDecorationLine: "underline"}}>
+                    <h6 className={classes.italics }>
                         Working Together
-                    </h5>
+                    </h6>
                 </Grid>
             </Grid>
         </Grid>
