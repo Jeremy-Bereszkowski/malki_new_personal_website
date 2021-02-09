@@ -1,6 +1,6 @@
 import React from "react";
 
-import {fullName} from "../global";
+import {fullName, title} from "../global";
 
 const footpathBackground = "/footpath-background.jpg"
 const lighthouseBackground = "/lighthouse-background.jpg"
@@ -9,7 +9,7 @@ const avatar = null
 const LandingData = {
     core: {
         header: fullName,
-        body: "Family Therapist & Counsellor",
+        body: title,
         background: footpathBackground,
     },
     aboutMe: {
@@ -71,7 +71,7 @@ const LandingData = {
         ]
     },
     generalInfo: {
-        header: "FAQ",
+        header: "Frequently Asked Questions",
         para: [
             "No GP referral required.",
             "Sliding scale of fees.",

@@ -20,10 +20,8 @@ const useStyles = makeStyles(theme=>({
         backgroundColor: Colours.grayColor[14],
     },
     large: {
-        // width: theme.spacing(3.75),
-        // height: theme.spacing(3.75),
-        maxWidth: "20px",
-        maxHeight: "20px",
+        maxWidth: "40px",
+        maxHeight: "40px",
     },
 }))
 
