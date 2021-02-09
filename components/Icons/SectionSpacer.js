@@ -56,7 +56,7 @@ export default function SectionSpacer() {
                     </Grid>
                 </Grid>
                 <Grid>
-                    <h6 className={classes.italics }>
+                    <h6 className={classes.italics}>
                         Working Together
                     </h6>
                 </Grid>
