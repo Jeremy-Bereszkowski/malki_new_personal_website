@@ -3,14 +3,12 @@ import classNames from "classnames";
 
 import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
-import FlareIcon from "@material-ui/icons/Flare";
-import ExtensionIcon from '@material-ui/icons/Extension';
 
 const PuzzleIcon = "/puzzle_icon.png";
 
 import Colours from "assets/strings/colours";
 
-const useStyles = makeStyles(theme=>({
+const useStyles = makeStyles({
     padding: {
         padding: "4vh 0",
         display: "absolute",
@@ -20,10 +18,10 @@ const useStyles = makeStyles(theme=>({
         backgroundColor: Colours.grayColor[14],
     },
     large: {
-        maxWidth: "40px",
-        maxHeight: "40px",
+        maxWidth: "30px",
+        maxHeight: "30px",
     },
-}))
+});
 
 export default function SectionSpacer() {
     const classes = useStyles()

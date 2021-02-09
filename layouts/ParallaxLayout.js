@@ -17,7 +17,7 @@ const useStyles = makeStyles({
         paddingBottom: "25px",
         marginRight: "auto",
         marginLeft: "auto",
-        width: "50vw",
+        width: "60vw",
         maxWidth: "1200px",
         zIndex: "2",
         border: "solid 2px " + Colours.primary

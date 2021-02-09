@@ -14,7 +14,7 @@ const LandingData = {
     },
     aboutMe: {
         about: {
-            header: `My name is ${fullName},`,
+            header: `Professional Profile`,
             para: [
                 "I am a highly experienced counsellor and family therapist in private practice.",
                 "My passion is to understand and help people. " +
