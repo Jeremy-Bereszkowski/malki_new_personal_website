@@ -6,7 +6,7 @@ import Grid from "@material-ui/core/Grid";
 
 import Parallax from "components/Parallax/Parallax";
 
-import {extraSmallFont, largeFont} from "assets/jss/coreStyles";
+import {extraSmallFont, largeFont, smallFont} from "assets/jss/coreStyles";
 import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
@@ -34,7 +34,7 @@ const useStyles = makeStyles({
         minHeight: "32px",
     },
     titleSubHeading: {
-        ...extraSmallFont,
+        ...smallFont,
         fontWeight: "350",
         color: Colours.white,
         textDecoration: "none",
@@ -77,9 +77,9 @@ export default function ParallaxLayout(props) {
                             <hr size={30} className={classes.greenHr}/>
                         </Grid>
                         <Grid item>
-                            <h3 className={classes.titleSubHeading}>
+                            <h4 className={classes.titleSubHeading}>
                                 {body}
-                            </h3>
+                            </h4>
                         </Grid>
                     </Grid>
                 </div>
