@@ -21,9 +21,6 @@ const useStyles = makeStyles({
         maxWidth: "35px",
         maxHeight: "35px",
     },
-    italics: {
-        fontStyle: "italic",
-    }
 });
 
 export default function SectionSpacer() {
@@ -33,32 +30,18 @@ export default function SectionSpacer() {
         <Grid item className={classNames(classes.padding, classes.baseBackground)}>
             <Grid
                 container
-                direction={"column"}
+                direction={"row"}
                 justify={"center"}
                 alignItems={"center"}
             >
-                <Grid>
-                    <Grid
-                        container
-                        direction={"row"}
-                        justify={"center"}
-                        alignItems={"center"}
-                    >
-                        <Grid item>
-                            <img src={PuzzleIcon} className={classes.large}/>
-                        </Grid>
-                        <Grid item>
-                            <img src={PuzzleIcon} className={classes.large}/>
-                        </Grid>
-                        <Grid item>
-                            <img src={PuzzleIcon} className={classes.large}/>
-                        </Grid>
-                    </Grid>
+                <Grid item>
+                    <img src={PuzzleIcon} className={classes.large}/>
                 </Grid>
-                <Grid>
-                    <h6 className={classes.italics}>
-                        Working Together
-                    </h6>
+                <Grid item>
+                    <img src={PuzzleIcon} className={classes.large}/>
+                </Grid>
+                <Grid item>
+                    <img src={PuzzleIcon} className={classes.large}/>
                 </Grid>
             </Grid>
         </Grid>

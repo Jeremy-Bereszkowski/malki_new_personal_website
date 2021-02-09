@@ -17,10 +17,14 @@ export default function ThreeQuarterGrid(props) {
             className={rootClassName}
         >
             <Grid item xs={12} md={8}>
+                <br/>
                 {leftPanel}
+                <br/>
             </Grid>
             <Grid item xs={12} md={3}>
+                <br/>
                 {rightPanel}
+                <br/>
             </Grid>
         </Grid>
     )
