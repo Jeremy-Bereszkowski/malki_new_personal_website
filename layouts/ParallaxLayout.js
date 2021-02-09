@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types"
+import classNames from "classnames"
 
 import {makeStyles} from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid";
 
 import Parallax from "components/Parallax/Parallax";
 
-import {extraSmallFont, largeFont, smallFont} from "assets/jss/coreStyles";
+import {largeFont, smallFont} from "assets/jss/coreStyles";
 import Colours from "assets/strings/colours";
+import HiddenContainer from "../components/GridLayouts/HiddenContainer";
 
 const useStyles = makeStyles({
     container: {
@@ -17,10 +19,15 @@ const useStyles = makeStyles({
         paddingBottom: "25px",
         marginRight: "auto",
         marginLeft: "auto",
-        width: "60vw",
         maxWidth: "1200px",
         zIndex: "2",
         border: "solid 2px " + Colours.primary
+    },
+    wide: {
+        width: "80vw",
+    },
+    skinny: {
+        width: "60vw",
     },
     title: {
         ...largeFont,
@@ -53,36 +60,43 @@ export default function ParallaxLayout(props) {
     const {children, image, header, body} = props
     const classes = useStyles()
 
+    const panelContent = containerClass => (
+        <div className={containerClass}>
+            <Grid
+                container
+                direction={"column"}
+                justify={"center"}
+                alignContent={"center"}
+            >
+                <Grid item>
+                    <h1 className={classes.title}>{header}</h1>
+                </Grid>
+            </Grid>
+            <Grid
+                container
+                direction={"column"}
+                justify={"center"}
+                alignContent={"stretch"}
+            >
+                <Grid item>
+                    <hr size={30} className={classes.greenHr}/>
+                </Grid>
+                <Grid item>
+                    <h4 className={classes.titleSubHeading}>
+                        {body}
+                    </h4>
+                </Grid>
+            </Grid>
+        </div>
+    )
+
     return (
         <>
             <Parallax image={image} filter="dark">
-                <div className={classes.container}>
-                    <Grid
-                        container
-                        direction={"column"}
-                        justify={"center"}
-                        alignContent={"center"}
-                    >
-                        <Grid item>
-                            <h1 className={classes.title}>{header}</h1>
-                        </Grid>
-                    </Grid>
-                    <Grid
-                        container
-                        direction={"column"}
-                        justify={"center"}
-                        alignContent={"stretch"}
-                    >
-                        <Grid item>
-                            <hr size={30} className={classes.greenHr}/>
-                        </Grid>
-                        <Grid item>
-                            <h4 className={classes.titleSubHeading}>
-                                {body}
-                            </h4>
-                        </Grid>
-                    </Grid>
-                </div>
+                <HiddenContainer
+                    smallPanel={panelContent(classNames(classes.container, classes.wide))}
+                    largePanel={panelContent(classNames(classes.container, classes.skinny))}
+                />
             </Parallax>
             {children}
         </>
