@@ -1,6 +1,6 @@
 import React from "react";
 
-import {fullName} from "../global";
+import {fullName, title} from "../global";
 
 const footpathBackground = "/footpath-background.jpg"
 const lighthouseBackground = "/lighthouse-background.jpg"
@@ -9,12 +9,12 @@ const avatar = null
 const LandingData = {
     core: {
         header: fullName,
-        body: "Family Therapist & Counsellor",
-        background: lighthouseBackground,
+        body: title,
+        background: footpathBackground,
     },
     aboutMe: {
         about: {
-            header: `My name is ${fullName},`,
+            header: `Professional Profile`,
             para: [
                 "I am a highly experienced counsellor and family therapist in private practice.",
                 "My passion is to understand and help people. " +
@@ -71,11 +71,11 @@ const LandingData = {
         ]
     },
     generalInfo: {
-        header: "FAQ",
+        header: "Frequently Asked Questions",
         para: [
             "No GP referral required.",
             "Sliding scale of fees.",
-            "Sessions by zoom or video call available in Melbourne, interstate and internationally."
+            "Sessions also available by zoom or video call in Melbourne, interstate and internationally."
         ]
     }
 }

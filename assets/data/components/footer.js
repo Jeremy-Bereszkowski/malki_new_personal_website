@@ -1,9 +1,9 @@
-import {fullName} from "../global";
+import {fullName, title} from "../global";
 
 const FooterData = {
     left: {
         header: fullName,
-        subHeader: "Practice located in Windsor, Melbourne",
+        subHeader: title,
     },
     right: {
         email: "Email:",

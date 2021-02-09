@@ -1,17 +1,16 @@
-const headerString = "Malki New | Family Therapist & Counsellor"
+const fullName = "Malki New";
+const title = "Counsellor & Family Therapist";
 
-const fullName = "Malki New"
+const headerString = `${fullName} | ${title}`;
 
-const address = "Windsor, Melbourne, Australia"
-
-const phone = "(+61) 0403 110 899"
-const email = "malki.new@gmail.com"
+const phone = "(+61) 0403 110 899";
+const email = "malki.new@gmail.com";
 
 export {
     headerString,
 
     fullName,
-    address,
+    title,
     phone,
     email,
-}
+};

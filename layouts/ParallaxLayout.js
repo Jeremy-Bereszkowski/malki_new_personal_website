@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types"
+import classNames from "classnames"
 
 import {makeStyles} from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid";
 
 import Parallax from "components/Parallax/Parallax";
 
-import {extraSmallFont, largeFont} from "assets/jss/coreStyles";
+import {largeFont, smallFont} from "assets/jss/coreStyles";
 import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
@@ -17,10 +18,13 @@ const useStyles = makeStyles({
         paddingBottom: "25px",
         marginRight: "auto",
         marginLeft: "auto",
-        width: "90vw",
         maxWidth: "1200px",
         zIndex: "2",
         border: "solid 2px " + Colours.primary
+    },
+    wide: {
+        width: "65vw",
+        minWidth: "300px",
     },
     title: {
         ...largeFont,
@@ -34,7 +38,7 @@ const useStyles = makeStyles({
         minHeight: "32px",
     },
     titleSubHeading: {
-        ...extraSmallFont,
+        ...smallFont,
         fontWeight: "350",
         color: Colours.white,
         textDecoration: "none",
@@ -53,36 +57,40 @@ export default function ParallaxLayout(props) {
     const {children, image, header, body} = props
     const classes = useStyles()
 
+    const panelContent = containerClass => (
+        <div className={containerClass}>
+            <Grid
+                container
+                direction={"column"}
+                justify={"center"}
+                alignContent={"center"}
+            >
+                <Grid item>
+                    <h1 className={classes.title}>{header}</h1>
+                </Grid>
+            </Grid>
+            <Grid
+                container
+                direction={"column"}
+                justify={"center"}
+                alignContent={"stretch"}
+            >
+                <Grid item>
+                    <hr size={30} className={classes.greenHr}/>
+                </Grid>
+                <Grid item>
+                    <h4 className={classes.titleSubHeading}>
+                        {body}
+                    </h4>
+                </Grid>
+            </Grid>
+        </div>
+    )
+
     return (
         <>
             <Parallax image={image} filter="dark">
-                <div className={classes.container}>
-                    <Grid
-                        container
-                        direction={"column"}
-                        justify={"center"}
-                        alignContent={"center"}
-                    >
-                        <Grid item>
-                            <h1 className={classes.title}>{header}</h1>
-                        </Grid>
-                    </Grid>
-                    <Grid
-                        container
-                        direction={"column"}
-                        justify={"center"}
-                        alignContent={"stretch"}
-                    >
-                        <Grid item>
-                            <hr size={30} className={classes.greenHr}/>
-                        </Grid>
-                        <Grid item>
-                            <h4 className={classes.titleSubHeading}>
-                                {body}
-                            </h4>
-                        </Grid>
-                    </Grid>
-                </div>
+                {panelContent(classNames(classes.container, classes.wide))}
             </Parallax>
             {children}
         </>
