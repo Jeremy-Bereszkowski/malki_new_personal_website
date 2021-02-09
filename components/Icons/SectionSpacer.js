@@ -4,9 +4,9 @@ import classNames from "classnames";
 import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 
-const PuzzleIcon = "/puzzle_icon.png";
-
 import Colours from "assets/strings/colours";
+
+const PuzzleIcon = "/puzzle_icon.png";
 
 const useStyles = makeStyles({
     padding: {
@@ -18,8 +18,8 @@ const useStyles = makeStyles({
         backgroundColor: Colours.grayColor[14],
     },
     large: {
-        maxWidth: "30px",
-        maxHeight: "30px",
+        maxWidth: "35px",
+        maxHeight: "35px",
     },
 });
 
@@ -30,21 +30,32 @@ export default function SectionSpacer() {
         <Grid item className={classNames(classes.padding, classes.baseBackground)}>
             <Grid
                 container
-                direction={"row"}
+                direction={"column"}
                 justify={"center"}
                 alignItems={"center"}
             >
-                <Grid item>
-                    <img src={PuzzleIcon} className={classes.large}/>
-                    {/*<PuzzleIcon/>*/}
+                <Grid>
+                    <Grid
+                        container
+                        direction={"row"}
+                        justify={"center"}
+                        alignItems={"center"}
+                    >
+                        <Grid item>
+                            <img src={PuzzleIcon} className={classes.large}/>
+                        </Grid>
+                        <Grid item>
+                            <img src={PuzzleIcon} className={classes.large}/>
+                        </Grid>
+                        <Grid item>
+                            <img src={PuzzleIcon} className={classes.large}/>
+                        </Grid>
+                    </Grid>
                 </Grid>
-                <Grid item>
-                    <img src={PuzzleIcon} className={classes.large}/>
-                    {/*<PuzzleIcon/>*/}
-                </Grid>
-                <Grid item>
-                    <img src={PuzzleIcon} className={classes.large}/>
-                    {/*<PuzzleIcon/>*/}
+                <Grid>
+                    <h5 style={{textDecorationStyle: "wavy", textDecorationLine: "underline"}}>
+                        Working Together
+                    </h5>
                 </Grid>
             </Grid>
         </Grid>
