@@ -23,7 +23,8 @@ const useStyles = makeStyles({
         border: "solid 2px " + Colours.primary
     },
     wide: {
-        width: "70vw",
+        width: "65vw",
+        minWidth: "300px",
     },
     title: {
         ...largeFont,
