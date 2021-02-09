@@ -77,9 +77,9 @@ export default function ParallaxLayout(props) {
                             <hr size={30} className={classes.greenHr}/>
                         </Grid>
                         <Grid item>
-                            <h4 className={classes.titleSubHeading}>
+                            <h3 className={classes.titleSubHeading}>
                                 {body}
-                            </h4>
+                            </h3>
                         </Grid>
                     </Grid>
                 </div>
