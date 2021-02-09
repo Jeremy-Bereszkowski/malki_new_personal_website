@@ -9,7 +9,6 @@ import Parallax from "components/Parallax/Parallax";
 
 import {largeFont, smallFont} from "assets/jss/coreStyles";
 import Colours from "assets/strings/colours";
-import HiddenContainer from "../components/GridLayouts/HiddenContainer";
 
 const useStyles = makeStyles({
     container: {
@@ -24,10 +23,7 @@ const useStyles = makeStyles({
         border: "solid 2px " + Colours.primary
     },
     wide: {
-        width: "80vw",
-    },
-    skinny: {
-        width: "60vw",
+        width: "70vw",
     },
     title: {
         ...largeFont,
@@ -93,10 +89,7 @@ export default function ParallaxLayout(props) {
     return (
         <>
             <Parallax image={image} filter="dark">
-                <HiddenContainer
-                    smallPanel={panelContent(classNames(classes.container, classes.wide))}
-                    largePanel={panelContent(classNames(classes.container, classes.skinny))}
-                />
+                {panelContent(classNames(classes.container, classes.wide))}
             </Parallax>
             {children}
         </>
