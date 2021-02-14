@@ -54,7 +54,7 @@ const useStyles = makeStyles({
 })
 
 export default function ParallaxLayout(props) {
-    const {children, image, header, body} = props
+    const {children, image, header, body, alt} = props
     const classes = useStyles()
 
     const panelContent = containerClass => (
@@ -83,6 +83,20 @@ export default function ParallaxLayout(props) {
                         {body}
                     </h4>
                 </Grid>
+                {
+                    alt !== undefined ? (
+                        <>
+                            <Grid item>
+                                <hr size={30} className={classes.greenHr}/>
+                            </Grid>
+                            <Grid item>
+                                <h4 className={classes.titleSubHeading}>
+                                    {alt}
+                                </h4>
+                            </Grid>
+                        </>
+                    ) : null
+                }
             </Grid>
         </div>
     )
@@ -98,7 +112,8 @@ export default function ParallaxLayout(props) {
 }
 
 ParallaxLayout.propTypes = {
-    image: PropTypes.string,
-    header: PropTypes.string,
-    body: PropTypes.string,
+    image: PropTypes.string.isRequired,
+    header: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+    alt: PropTypes.string,
 }

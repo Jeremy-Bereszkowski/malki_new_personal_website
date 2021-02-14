@@ -44,7 +44,7 @@ export default function LandingPage() {
 
     return (
         <HeaderFooterLayout>
-            <ParallaxLayout image={data.core.background} header={data.core.header} body={data.core.body}>
+            <ParallaxLayout image={data.core.background} header={data.core.header} body={data.core.body} alt={data.core.alt}>
                 <Grid
                     container
                     direction="column"
