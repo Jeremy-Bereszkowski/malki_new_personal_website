@@ -85,16 +85,12 @@ export default function ParallaxLayout(props) {
                 </Grid>
                 {
                     alt !== undefined ? (
-                        <>
-                            <Grid item>
-                                <hr size={30} className={classes.greenHr}/>
-                            </Grid>
-                            <Grid item>
-                                <h4 className={classes.titleSubHeading}>
-                                    {alt}
-                                </h4>
-                            </Grid>
-                        </>
+                        <Grid item>
+                            <br/>
+                            <h4 className={classes.titleSubHeading}>
+                                {alt}
+                            </h4>
+                        </Grid>
                     ) : null
                 }
             </Grid>
