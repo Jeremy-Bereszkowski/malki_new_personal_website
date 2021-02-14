@@ -3,20 +3,11 @@ const Colours = {
     black: "#000",
     primary: "#458a96",
     secondary: "#708e96",
-    infoColor: [
-        "#00acc1",
-        "#26c6da",
-        "#00acc1",
-        "#00d3ee",
-        "#d9edf7",
-        "#c4e3f3",
-        "#b2ebf2",
-        "#4dd0e1"
-    ],
+    infoColor: "#00acc1",
     grayColor: [
         "#999",
         "#3C4858",
-        "#eee",
+        "#e2e9e9",
         "#343434",
         "#585858",
         "#232323",

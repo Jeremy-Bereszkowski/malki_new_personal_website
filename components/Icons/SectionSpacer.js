@@ -15,7 +15,7 @@ const useStyles = makeStyles({
         zIndex: "7",
     },
     baseBackground: {
-        backgroundColor: Colours.grayColor[14],
+        backgroundColor: Colours.grayColor[2],
     },
     large: {
         maxWidth: "35px",
@@ -33,12 +33,17 @@ export default function SectionSpacer() {
                 direction={"row"}
                 justify={"center"}
                 alignItems={"center"}
+                alignContent={"center"}
             >
                 <Grid item>
                     <img src={PuzzleIcon} className={classes.large}/>
                 </Grid>
                 <Grid item>
-                    <img src={PuzzleIcon} className={classes.large}/>
+                    <p style={{fontStyle: "italic", margin: "auto 2vw"}}>
+                        <b>
+                            Working Together
+                        </b>
+                    </p>
                 </Grid>
                 <Grid item>
                     <img src={PuzzleIcon} className={classes.large}/>
