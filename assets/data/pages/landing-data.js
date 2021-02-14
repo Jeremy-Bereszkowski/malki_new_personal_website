@@ -9,6 +9,7 @@ const LandingData = {
     core: {
         header: fullName,
         body: title,
+        alt: "Finding New Pathways by Working Together",
         background: footpathBackground,
     },
     aboutMe: {
@@ -74,7 +75,8 @@ const LandingData = {
         para: [
             "No GP referral required.",
             "Sliding scale of fees.",
-            "Sessions also available by zoom or video call in Melbourne, interstate and internationally."
+            "Sessions also available by zoom or video call in Melbourne, interstate and internationally.",
+            "For inquiries and to make an appointment please contact me via my mobile number or e-mail address below.",
         ]
     }
 }

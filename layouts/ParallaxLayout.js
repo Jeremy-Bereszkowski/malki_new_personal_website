@@ -7,7 +7,7 @@ import Grid from "@material-ui/core/Grid";
 
 import Parallax from "components/Parallax/Parallax";
 
-import {largeFont, smallFont} from "assets/jss/coreStyles";
+import {extraSmallFont, largeFont, smallFont} from "assets/jss/coreStyles";
 import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
@@ -46,6 +46,11 @@ const useStyles = makeStyles({
         textAlign: "center",
         margin: "0",
     },
+    italics: {
+        fontStyle: "italic",
+        ...extraSmallFont,
+        marginTop: "4px",
+    },
     greenHr: {
         borderTop: "7px solid " + Colours.secondary,
         marginLeft: "10%",
@@ -54,7 +59,7 @@ const useStyles = makeStyles({
 })
 
 export default function ParallaxLayout(props) {
-    const {children, image, header, body} = props
+    const {children, image, header, body, alt} = props
     const classes = useStyles()
 
     const panelContent = containerClass => (
@@ -83,6 +88,15 @@ export default function ParallaxLayout(props) {
                         {body}
                     </h4>
                 </Grid>
+                {
+                    alt !== undefined ? (
+                        <Grid item>
+                            <h4 className={classNames(classes.titleSubHeading, classes.italics)}>
+                                {alt}
+                            </h4>
+                        </Grid>
+                    ) : null
+                }
             </Grid>
         </div>
     )
@@ -98,7 +112,8 @@ export default function ParallaxLayout(props) {
 }
 
 ParallaxLayout.propTypes = {
-    image: PropTypes.string,
-    header: PropTypes.string,
-    body: PropTypes.string,
+    image: PropTypes.string.isRequired,
+    header: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+    alt: PropTypes.string,
 }

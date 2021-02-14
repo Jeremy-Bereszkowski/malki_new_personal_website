@@ -7,7 +7,7 @@ import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
   progress: {
-    color: Colours.infoColor[0],
+    color: Colours.infoColor,
     width: "6rem !important",
     height: "6rem !important"
   },
