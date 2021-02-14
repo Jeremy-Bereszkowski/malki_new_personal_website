@@ -7,7 +7,7 @@ import Grid from "@material-ui/core/Grid";
 
 import Parallax from "components/Parallax/Parallax";
 
-import {largeFont, smallFont} from "assets/jss/coreStyles";
+import {extraSmallFont, largeFont, smallFont} from "assets/jss/coreStyles";
 import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
@@ -48,6 +48,7 @@ const useStyles = makeStyles({
     },
     italics: {
         fontStyle: "italic",
+        ...extraSmallFont,
     },
     greenHr: {
         borderTop: "7px solid " + Colours.secondary,
