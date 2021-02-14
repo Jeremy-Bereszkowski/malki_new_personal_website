@@ -15,7 +15,7 @@ const useStyles = makeStyles({
         zIndex: "7",
     },
     baseBackground: {
-        backgroundColor: Colours.grayColor[14],
+        backgroundColor: Colours.grayColor[2],
     },
     large: {
         maxWidth: "35px",
@@ -40,7 +40,9 @@ export default function SectionSpacer() {
                 </Grid>
                 <Grid item>
                     <p style={{fontStyle: "italic", margin: "auto 2vw"}}>
-                        Working Together
+                        <b>
+                            Working Together
+                        </b>
                     </p>
                 </Grid>
                 <Grid item>

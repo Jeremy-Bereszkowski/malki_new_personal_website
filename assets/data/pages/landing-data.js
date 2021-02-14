@@ -4,7 +4,7 @@ import {fullName, title} from "../global";
 
 const footpathBackground = "/footpath-background.jpg"
 const lighthouseBackground = "/lighthouse-background.jpg"
-const avatar = null
+const avatar = "/avatar.jpg"
 
 const LandingData = {
     core: {

@@ -24,7 +24,7 @@ const useStyles = makeStyles({
         zIndex: "7",
     },
     baseBackground: {
-        backgroundColor: Colours.grayColor[14],
+        backgroundColor: Colours.grayColor[2],
     },
 });
 
