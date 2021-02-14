@@ -33,12 +33,15 @@ export default function SectionSpacer() {
                 direction={"row"}
                 justify={"center"}
                 alignItems={"center"}
+                alignContent={"center"}
             >
                 <Grid item>
                     <img src={PuzzleIcon} className={classes.large}/>
                 </Grid>
                 <Grid item>
-                    <img src={PuzzleIcon} className={classes.large}/>
+                    <p style={{fontStyle: "italic", margin: "auto 2vw"}}>
+                        Working Together
+                    </p>
                 </Grid>
                 <Grid item>
                     <img src={PuzzleIcon} className={classes.large}/>

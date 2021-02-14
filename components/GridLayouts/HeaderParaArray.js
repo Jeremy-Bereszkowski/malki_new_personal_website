@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from "prop-types"
+import classNames from "classnames"
 
 import {makeStyles} from "@material-ui/core/styles"
 
@@ -13,6 +14,9 @@ const useStyles = makeStyles({
     listRoot: {
         listStylePosition: 'outside'
     },
+    font: {
+        fontWeight: "400",
+    }
 })
 
 export default function HeaderParaArray(props) {
@@ -22,12 +26,12 @@ export default function HeaderParaArray(props) {
     const textAlign = centerText ? classes.centerText : classes.leftText
 
     const paraArray = para.map((ele, key) => (
-        <h4 key={key} className={textAlign}>
+        <h4 key={key} className={classNames(textAlign, classes.font)}>
             {ele}
         </h4>
     ))
     const listArray = para.map((ele, key) => (
-        <li key={key} className={textAlign}>
+        <li key={key} className={classNames(textAlign, classes.font)}>
             {ele}
         </li>
     ))
@@ -44,7 +48,7 @@ export default function HeaderParaArray(props) {
             </b>
         </h3>
     ) : (
-        <h3 className={textAlign}>
+        <h3 className={classNames(textAlign, classes.font)}>
             {header}
         </h3>
     )

@@ -49,6 +49,7 @@ const useStyles = makeStyles({
     italics: {
         fontStyle: "italic",
         ...extraSmallFont,
+        marginTop: "4px",
     },
     greenHr: {
         borderTop: "7px solid " + Colours.secondary,
