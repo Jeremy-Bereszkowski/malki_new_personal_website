@@ -46,6 +46,9 @@ const useStyles = makeStyles({
         textAlign: "center",
         margin: "0",
     },
+    italics: {
+        fontStyle: "italic",
+    },
     greenHr: {
         borderTop: "7px solid " + Colours.secondary,
         marginLeft: "10%",
@@ -86,8 +89,7 @@ export default function ParallaxLayout(props) {
                 {
                     alt !== undefined ? (
                         <Grid item>
-                            <br/>
-                            <h4 className={classes.titleSubHeading}>
+                            <h4 className={classNames(classes.titleSubHeading, classes.italics)}>
                                 {alt}
                             </h4>
                         </Grid>
