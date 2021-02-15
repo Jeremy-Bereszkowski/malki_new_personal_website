@@ -19,7 +19,7 @@ import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
     padding: {
-        padding: "6vh 0",
+        padding: "3vh 0",
         display: "absolute",
         zIndex: "7",
     },
@@ -44,7 +44,12 @@ export default function LandingPage() {
 
     return (
         <HeaderFooterLayout>
-            <ParallaxLayout image={data.core.background} header={data.core.header} body={data.core.body} alt={data.core.alt}>
+            <ParallaxLayout
+                image={data.core.background}
+                header={data.core.header}
+                body={data.core.body}
+                alt={data.core.alt}
+            >
                 <Grid
                     container
                     direction="column"
@@ -71,7 +76,6 @@ export default function LandingPage() {
                             languages={data.languages}
                         />
                     </Grid>
-                    <SectionSpacer />
                     <Grid item className={classNames(classes.padding, classes.baseBackground)}>
                         <GeneralInfo
                             header={data.generalInfo.header}

@@ -7,12 +7,9 @@ import Grid from "@material-ui/core/Grid";
 import HeaderParaArray from "components/GridLayouts/HeaderParaArray";
 import HiddenContainer from "components/GridLayouts/HiddenContainer";
 
-import {sectionHeight} from "assets/jss/coreStyles";
-
 const useStyles = makeStyles({
     root: {
-        ...sectionHeight,
-        margin: "2.5vh auto",
+        margin: "0 auto 5vh auto",
         maxWidth: "85%",
     },
 })

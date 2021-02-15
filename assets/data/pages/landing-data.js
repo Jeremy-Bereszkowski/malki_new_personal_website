@@ -35,7 +35,7 @@ const LandingData = {
         header: "Qualifications",
         para: [
             "Diploma of Psychology, Psychotechnical Institute Antwerp/Belgium, 1985",
-            "Post graduate Training in Psychoanalytical psychotherapy with a member of the Societe Psychoanalytique de Bruxelles/Belgium, 1988",
+            "Post graduate Training in Psychoanalytical psychotherapy with a member of the Société Belge de Psychanalyse de Bruxelles, 1988",
             "Graduate Diploma in social Science - Family Therapy, Swinburne University Melbourne/Australia, 2003",
             "Masters of Social Science - Family Therapy, Swinburne University Melbourne, Australia, 2012",
             "Clinical member of Australian Association of Family Therapists (AAFT).",
