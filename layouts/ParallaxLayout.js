@@ -34,7 +34,7 @@ const useStyles = makeStyles({
         textTransform: "uppercase",
         textAlign: "center",
         marginTop: "30px",
-        marginBottom: "-5px",
+        marginBottom: "5px",
         minHeight: "32px",
     },
     titleSubHeading: {
@@ -44,17 +44,19 @@ const useStyles = makeStyles({
         textDecoration: "none",
         textTransform: "uppercase",
         textAlign: "center",
-        margin: "0",
+        margin: "10px 0 0 0"
     },
     italics: {
         fontStyle: "italic",
         ...extraSmallFont,
-        marginTop: "4px",
+        marginTop: "2px",
     },
     greenHr: {
-        borderTop: "7px solid " + Colours.secondary,
+        borderTop: `7px solid ${Colours.secondary}`,
         marginLeft: "10%",
         marginRight: "10%",
+        marginTop: "0",
+        marginBottom: "0",
     },
 })
 
@@ -68,35 +70,24 @@ export default function ParallaxLayout(props) {
                 container
                 direction={"column"}
                 justify={"center"}
-                alignContent={"center"}
-            >
-                <Grid item>
-                    <h1 className={classes.title}>{header}</h1>
-                </Grid>
-            </Grid>
-            <Grid
-                container
-                direction={"column"}
-                justify={"center"}
                 alignContent={"stretch"}
             >
                 <Grid item>
-                    <hr size={30} className={classes.greenHr}/>
+                    <h1 className={classes.title}>{header}</h1>
                 </Grid>
                 <Grid item>
                     <h4 className={classes.titleSubHeading}>
                         {body}
                     </h4>
                 </Grid>
-                {
-                    alt !== undefined ? (
-                        <Grid item>
-                            <h4 className={classNames(classes.titleSubHeading, classes.italics)}>
-                                {alt}
-                            </h4>
-                        </Grid>
-                    ) : null
-                }
+                <Grid item>
+                    <hr size={30} className={classes.greenHr}/>
+                </Grid>
+                <Grid item>
+                    <h4 className={classNames(classes.titleSubHeading, classes.italics)}>
+                        {alt}
+                    </h4>
+                </Grid>
             </Grid>
         </div>
     )
@@ -115,5 +106,5 @@ ParallaxLayout.propTypes = {
     image: PropTypes.string.isRequired,
     header: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
-    alt: PropTypes.string,
+    alt: PropTypes.string.isRequired,
 }

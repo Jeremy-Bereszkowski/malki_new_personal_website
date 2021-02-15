@@ -1,13 +1,14 @@
 const Colours = {
     white: "#fff",
     black: "#000",
+    dark: "#212121",
     primary: "#458a96",
     secondary: "#708e96",
     infoColor: "#00acc1",
     grayColor: [
         "#999",
-        "#3C4858",
-        "#e2e9e9",
+        "#3c4858",
+        "#d7eeee",
         "#343434",
         "#585858",
         "#232323",
