@@ -7,8 +7,8 @@ const Colours = {
     infoColor: "#00acc1",
     grayColor: [
         "#999",
-        "#3C4858",
-        "#d4efef",
+        "#3c4858",
+        "#d7eeee",
         "#343434",
         "#585858",
         "#232323",
