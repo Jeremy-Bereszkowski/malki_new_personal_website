@@ -18,6 +18,7 @@ const LandingData = {
             header: `Professional Profile`,
             para: [
                 "I am a highly experienced counsellor and family therapist in private practice.",
+                "My experience included working for 20 years in the counseling team at Jewish Care Victoria in Melbourne.",
                 "My passion is to understand and help people. " +
                 "I believe that authenticity and empathy are the most important skills of a therapist. " +
                 "In my practice, I provide a safe, respectful environment which allows my clients to experience a healing & supportive relationship during counselling. " +
