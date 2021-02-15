@@ -20,7 +20,8 @@ const useStyles = makeStyles({
         marginLeft: "auto",
         maxWidth: "1200px",
         zIndex: "2",
-        border: "solid 2px " + Colours.primary
+        border: "solid 3px " + Colours.primary,
+        boxShadow: ".5px .5px black"
     },
     wide: {
         width: "65vw",
@@ -36,6 +37,7 @@ const useStyles = makeStyles({
         marginTop: "30px",
         marginBottom: "5px",
         minHeight: "32px",
+        textShadow: ".5px .5px black",
     },
     titleSubHeading: {
         ...smallFont,
@@ -44,13 +46,16 @@ const useStyles = makeStyles({
         textDecoration: "none",
         textTransform: "uppercase",
         textAlign: "center",
-        margin: "10px 0 0 0"
+        margin: "10px 0 0 0",
+        textShadow: ".5px .5px black",
     },
     italics: {
         fontStyle: "italic",
         ...extraSmallFont,
+        fontWeight: "550",
         marginTop: "15px",
         marginBottom: "-25px",
+        textShadow: ".5px .5px black",
     },
     greenHr: {
         borderTop: `7px solid ${Colours.secondary}`,

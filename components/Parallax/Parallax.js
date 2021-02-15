@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     maxHeight: "1600px",
     overflow: "hidden",
     position: "relative",
-    backgroundPosition: "50%",
+    backgroundPosition: "35%",
     backgroundSize: "cover",
     margin: "0",
     padding: "0",
@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   filter: {},
   darkColor: {
     "&:before": {
-      background: `rgba(${hexToRgb(Colours.dark)}, 0.05)`
+      background: `rgba(${hexToRgb(Colours.dark)}, 0.01)`
     },
     "&:after,&:before": {
       position: "absolute",
