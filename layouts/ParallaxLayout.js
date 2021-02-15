@@ -50,7 +50,7 @@ const useStyles = makeStyles({
         fontStyle: "italic",
         ...extraSmallFont,
         marginTop: "15px",
-        marginBottom: "-15px",
+        marginBottom: "-25px",
     },
     greenHr: {
         borderTop: `7px solid ${Colours.secondary}`,
