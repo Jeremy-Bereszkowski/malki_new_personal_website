@@ -18,10 +18,11 @@ const useStyles = makeStyles({
         paddingBottom: "25px",
         marginRight: "auto",
         marginLeft: "auto",
+        marginTop: "-120px",
         maxWidth: "1200px",
         zIndex: "2",
         border: "solid 3px " + Colours.primary,
-        boxShadow: ".5px .5px black"
+        boxShadow: ".5px .5px black",
     },
     wide: {
         width: "65vw",
