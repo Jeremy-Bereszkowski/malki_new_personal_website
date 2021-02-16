@@ -42,7 +42,7 @@ const useStyles = makeStyles({
     },
     titleSubHeading: {
         ...smallFont,
-        fontWeight: "350",
+        fontWeight: "400",
         color: Colours.white,
         textDecoration: "none",
         textTransform: "uppercase",
