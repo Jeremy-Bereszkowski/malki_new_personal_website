@@ -9,6 +9,7 @@ import Parallax from "components/Parallax/Parallax";
 
 import {extraSmallFont, largeFont, smallFont} from "assets/jss/coreStyles";
 import Colours from "assets/strings/colours";
+import useIsTouchDevice from "../util/device-detect";
 
 const useStyles = makeStyles({
     container: {
@@ -18,11 +19,16 @@ const useStyles = makeStyles({
         paddingBottom: "25px",
         marginRight: "auto",
         marginLeft: "auto",
-        marginTop: "-120px",
         maxWidth: "1200px",
         zIndex: "2",
-        border: "solid 3px " + Colours.primary,
-        boxShadow: ".5px .5px black",
+        /*border: `solid 3px ${Colours.primary}`,*/
+        /*boxShadow: ".5px .5px black",*/
+    },
+    mobileMargin: {
+        marginTop: "-300px",
+    },
+    desktopMargin: {
+        marginTop: "-380px",
     },
     wide: {
         width: "65vw",
@@ -71,8 +77,15 @@ export default function ParallaxLayout(props) {
     const {children, image, header, body, alt} = props
     const classes = useStyles()
 
-    const panelContent = containerClass => (
-        <div className={containerClass}>
+    const containerClasses = classNames({
+        [classes.container]: true,
+        [classes.wide]: true,
+        [classes.mobileMargin]: useIsTouchDevice(),
+        [classes.desktopMargin]: !useIsTouchDevice(),
+    })
+
+    const panelContent = () => (
+        <div className={containerClasses}>
             <Grid
                 container
                 direction={"column"}
@@ -102,7 +115,7 @@ export default function ParallaxLayout(props) {
     return (
         <>
             <Parallax image={image} filter="dark">
-                {panelContent(classNames(classes.container, classes.wide))}
+                {panelContent()}
             </Parallax>
             {children}
         </>
