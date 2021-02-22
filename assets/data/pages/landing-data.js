@@ -17,7 +17,7 @@ const LandingData = {
             header: `Professional Profile`,
             para: [
                 "I am a highly experienced counsellor and family therapist in private practice.",
-                "My experience includes working for 16 years in the counseling team at Jewish Care Victoria in Melbourne.",
+                "My experience includes working for 16 years in the counselling team at Jewish Care Victoria in Melbourne.",
                 "My passion is to understand and help people. " +
                 "I believe that authenticity and empathy are the most important skills of a therapist. " +
                 "In my practice, I provide a safe, respectful and confidential environment which allows my clients to experience a healing & supportive relationship during counselling. " +
@@ -59,7 +59,7 @@ const LandingData = {
         header: "Treatment Approach",
         para: [
             "I use an eclectic approach to therapy which involves assessing what framework and techniques work best with each individual client, couple and family.",
-            "I incorporate Psychodynamic theory, Solution-focused theory, Mindfulness techniques and Acceptance and Commitment therapy (ACT).",
+            "I incorporate Psychodynamic theory, Solution-Focused theory, Mindfulness techniques and Acceptance and Commitment therapy (ACT).",
             "When working with couples and families my approach includes both Family of Origin and Attachment theory."
         ]
     },
