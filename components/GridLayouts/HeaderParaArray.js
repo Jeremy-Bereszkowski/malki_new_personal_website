@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import classNames from "classnames"
 
 import {makeStyles} from "@material-ui/core/styles"
+import {extraSmall2Font} from "../../assets/jss/coreStyles";
 
 const useStyles = makeStyles({
     leftText: {
@@ -16,7 +17,11 @@ const useStyles = makeStyles({
     },
     font: {
         fontWeight: "400",
+    },
+    listFont: {
+        ...extraSmall2Font,
     }
+
 })
 
 export default function HeaderParaArray(props) {
@@ -31,7 +36,7 @@ export default function HeaderParaArray(props) {
         </h4>
     ))
     const listArray = para.map((ele, key) => (
-        <li key={key} className={classNames(textAlign, classes.font)}>
+        <li key={key} className={classNames(textAlign, classes.font, classes.listFont)}>
             {ele}
         </li>
     ))

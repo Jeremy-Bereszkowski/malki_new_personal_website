@@ -65,9 +65,9 @@ const useStyles = makeStyles({
         textShadow: ".5px .5px black",
     },
     greenHr: {
-        borderTop: `7px solid ${Colours.secondary}`,
-        marginLeft: "10%",
-        marginRight: "10%",
+        borderTop: `7px solid ${Colours.blue}`,
+        marginLeft: "20%",
+        marginRight: "20%",
         marginTop: "0",
         marginBottom: "0",
     },
