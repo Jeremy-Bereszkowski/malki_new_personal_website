@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   filter: {},
   darkColor: {
     "&:before": {
-      background: "rgba(" + hexToRgb(Colours.dark) + ", 0.5)"
+      /*background: `rgba(${hexToRgb(Colours.dark)}, 0.01)`*/
     },
     "&:after,&:before": {
       position: "absolute",

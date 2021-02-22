@@ -5,10 +5,11 @@ const Colours = {
     primary: "#458a96",
     secondary: "#708e96",
     infoColor: "#00acc1",
+    blue: "#0c9ae7",
     grayColor: [
         "#999",
         "#3c4858",
-        "#d7eeee",
+        "#d9f1f1",
         "#343434",
         "#585858",
         "#232323",
