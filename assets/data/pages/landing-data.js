@@ -25,7 +25,7 @@ const LandingData = {
                 "Although everyone has their own coping strategies to manage life's challenges, it is often beneficial to get professional help. " +
                 "A counsellor can help clients gain clarity and insight into the issues they are struggling with. " +
                 "Counselling can help clients develop strategies to build resilience and move forward positively in their lives.",
-                "In my practice I see individuals, couples and families.",
+                "In my practice, I see individuals, couples and families.",
             ]
         },
         avatar: avatar,
@@ -59,7 +59,7 @@ const LandingData = {
         header: "Treatment Approach",
         para: [
             "I use an eclectic approach to therapy which involves assessing what framework and techniques work best with each individual client, couple and family.",
-            "I incorporate Psychodynamic theory, Solution-Focused theory, Mindfulness techniques and Acceptance and Commitment therapy (ACT).",
+            "I incorporate Psychodynamic theory, Solution-Focused theory, Mindfulness techniques and Acceptance and Commitment Therapy (ACT).",
             "When working with couples and families my approach includes both Family of Origin and Attachment theory."
         ]
     },
@@ -76,7 +76,7 @@ const LandingData = {
         para: [
             "No GP referral required.",
             "Sliding scale of fees.",
-            "Sessions also available by zoom or video call in Melbourne, interstate and internationally.",
+            "Sessions are also available by zoom or video call in Melbourne, interstate and internationally.",
             "For inquiries and to make an appointment please contact me via my mobile number or e-mail address below.",
         ]
     }
