@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     maxHeight: "1600px",
     overflow: "hidden",
     position: "relative",
-    backgroundPosition: "35%",
+    backgroundPosition: "50%",
     backgroundSize: "cover",
     margin: "0",
     padding: "0",
