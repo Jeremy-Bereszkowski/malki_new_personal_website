@@ -5,6 +5,7 @@ import {makeStyles} from "@material-ui/core/styles"
 import {Grid} from "@material-ui/core";
 
 import Colours from "assets/strings/colours";
+import {MAIL_LINK, TEL_LINK} from "../../assets/strings/urls";
 
 const useStyles = makeStyles({
     spacing: {
@@ -23,7 +24,7 @@ export default function DataLink(props) {
     const {data, label, mobile, mail} = props
     const classes = useStyles()
 
-    const href = mail ? "mailto:"+data : mobile ? "tel:"+data : data
+    const href = mail ? MAIL_LINK : mobile ? TEL_LINK : data
 
     return (
         <Grid
