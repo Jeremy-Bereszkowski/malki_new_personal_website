@@ -1,8 +1,8 @@
 import React from "react";
 import classNames from "classnames"
 
-import {Grid} from "@material-ui/core";
-import {makeStyles} from "@material-ui/core/styles";
+import { Grid } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
 import HeaderFooterLayout from "layouts/HeaderFooterLayout";
 import ParallaxLayout from "layouts/ParallaxLayout";

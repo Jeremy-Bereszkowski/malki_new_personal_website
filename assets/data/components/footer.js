@@ -1,4 +1,4 @@
-import {fullName, title} from "../global";
+import { fullName, title } from "../global";
 
 const FooterData = {
     left: {

@@ -1,4 +1,4 @@
-import {email, phone} from "../data/global";
+import { email, phone } from "../data/global";
 
 export const URLS = {
     ROOT: "/",

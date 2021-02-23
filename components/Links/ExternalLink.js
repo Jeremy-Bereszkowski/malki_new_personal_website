@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import {makeStyles} from "@material-ui/core/styles"
-import {Grid} from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles"
+import { Grid } from "@material-ui/core";
 
 import Colours from "assets/strings/colours";
-import {MAIL_LINK, TEL_LINK} from "../../assets/strings/urls";
+import { MAIL_LINK, TEL_LINK } from "../../assets/strings/urls";
 
 const useStyles = makeStyles({
     spacing: {

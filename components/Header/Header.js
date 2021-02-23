@@ -1,13 +1,13 @@
 import React from "react";
 import classNames from "classnames";
 
-import {Grid, Tooltip} from "@material-ui/core";
-import {withStyles} from "@material-ui/styles";
+import { Grid, Tooltip } from "@material-ui/core";
+import { withStyles } from "@material-ui/styles";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 
-import {hexToRgb} from "assets/jss/nextjs-material-kit-pro";
-import {HeaderData} from "assets/data/components/header";
+import { hexToRgb } from "assets/jss/nextjs-material-kit-pro";
+import { HeaderData } from "assets/data/components/header";
 import Colours from "assets/strings/colours";
 
 import Button from "components/Buttons/Button";
