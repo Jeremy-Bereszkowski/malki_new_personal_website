@@ -2,13 +2,14 @@ import React from "react";
 import PropTypes from "prop-types"
 import classNames from "classnames"
 
-import {makeStyles} from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid";
 
 import Parallax from "components/Parallax/Parallax";
 
-import {extraSmallFont, largeFont, smallFont} from "assets/jss/coreStyles";
+import { extraSmallFont, largeFont, smallFont } from "assets/jss/coreStyles";
 import Colours from "assets/strings/colours";
+
 import useIsTouchDevice from "../util/device-detect";
 
 const useStyles = makeStyles({
@@ -21,11 +22,9 @@ const useStyles = makeStyles({
         marginLeft: "auto",
         maxWidth: "1200px",
         zIndex: "2",
-        /*border: `solid 3px ${Colours.primary}`,*/
-        /*boxShadow: ".5px .5px black",*/
     },
     mobileMargin: {
-        marginTop: "-300px",
+        marginTop: "-280px",
     },
     desktopMargin: {
         marginTop: "-380px",
