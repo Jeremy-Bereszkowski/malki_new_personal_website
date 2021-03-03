@@ -56,11 +56,11 @@ const useStyles = makeStyles({
         textShadow: ".5px .5px black",
     },
     italics: {
-        fontStyle: "italic",
+        /*fontStyle: "italic",*/
         ...extraSmallFont,
-        fontWeight: "550",
+        fontWeight: "450",
         marginTop: "15px",
-        marginBottom: "-25px",
+        /*marginBottom: "-25px",*/
         textShadow: ".5px .5px black",
     },
     greenHr: {
@@ -100,12 +100,12 @@ export default function ParallaxLayout(props) {
                     </h4>
                 </Grid>
                 <Grid item>
-                    <hr size={30} className={classes.greenHr}/>
-                </Grid>
-                <Grid item>
                     <h4 className={classNames(classes.titleSubHeading, classes.italics)}>
                         {alt}
                     </h4>
+                </Grid>
+                <Grid item>
+                    <hr size={30} className={classes.greenHr}/>
                 </Grid>
             </Grid>
         </div>
