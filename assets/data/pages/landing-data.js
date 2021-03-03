@@ -1,6 +1,6 @@
 import React from "react";
 
-import {fullName, title} from "../global";
+import { fullName, title } from "../global";
 
 const footpathBackground = "/footpath-background.jpg"
 const avatar = "/avatar.jpg"

@@ -1,4 +1,4 @@
-const hexToRgb = input => {
+export const hexToRgb = input => {
   input = input + "";
   input = input.replace("#", "");
   let hexRegex = /[0-9A-Fa-f]/g;
@@ -22,8 +22,4 @@ const hexToRgb = input => {
     ", " +
     parseInt(last, 16)
   );
-};
-
-export {
-  hexToRgb
 };

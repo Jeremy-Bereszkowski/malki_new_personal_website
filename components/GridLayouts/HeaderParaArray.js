@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from "prop-types"
 import classNames from "classnames"
 
-import {makeStyles} from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/core/styles"
 
-import {extraSmall2Font} from "assets/jss/coreStyles";
+import { extraSmall2Font } from "assets/jss/coreStyles";
 
 const useStyles = makeStyles({
     leftText: {
