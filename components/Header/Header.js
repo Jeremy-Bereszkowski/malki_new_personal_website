@@ -9,6 +9,7 @@ import { HeaderData } from "assets/data/components/header";
 import Colours from "assets/strings/colours";
 
 import Button from "components/Buttons/Button";
+import useIsTouchDevice from "../../util/device-detect";
 
 const useStyles = makeStyles({
   appBar: {
@@ -45,18 +46,21 @@ export default function Header() {
                 alignContent={"center"}
                 alignItems={"center"}
             >
-              {HeaderData.map((ele, key) =>
-                  <Grid item key={key}>
-                    <CustomTooltip title={ele.tip} >
-                      <Button
-                          href={ele.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                      >
-                        {ele.icon}
-                      </Button>
-                    </CustomTooltip>
-                  </Grid>
+              {HeaderData.map((ele, key) => {
+                const href = ele.mobileOnClick ? (useIsTouchDevice() ? ele.href : null) : ele.href
+                return (
+                    <Grid item key={key}>
+                      <CustomTooltip title={ele.tip}>
+                        <Button
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                          {ele.icon}
+                        </Button>
+                      </CustomTooltip>
+                    </Grid>
+                  )}
               )}
             </Grid>
           </Grid>

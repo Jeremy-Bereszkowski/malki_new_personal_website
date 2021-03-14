@@ -10,7 +10,8 @@ import {phone_string} from "../global";
 
 export const HeaderData = [
     {
-        href: '',
+        href: TEL_LINK,
+        mobileOnClick: true,
         icon: <PhoneIcon style={{color: Colours.grayColor[1]}} />,
         tip: phone_string,
     },
