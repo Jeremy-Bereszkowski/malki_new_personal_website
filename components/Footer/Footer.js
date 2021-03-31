@@ -8,7 +8,7 @@ import DataLink from "components/Links/ExternalLink";
 
 import FooterData from "assets/data/components/footer";
 import Colours from "assets/strings/colours";
-import { email, phone } from "assets/data/global";
+import {email, phone, phone_string} from "assets/data/global";
 import HiddenContainer from "../GridLayouts/HiddenContainer";
 
 const useStyles = makeStyles({
@@ -167,7 +167,7 @@ export default function Footer() {
                     </Grid>
                     <Grid item>
                         <DataLink
-                            data={phone}
+                            data={phone_string}
                             mobile={true}
                             label={FooterData.right.phone}
                         />
