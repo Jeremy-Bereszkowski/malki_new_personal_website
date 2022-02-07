@@ -34,7 +34,7 @@ const LandingData = {
         header: "Qualifications",
         para: [
             "Masters of Social Science - Family Therapy, Swinburne University Melbourne, Australia, 2012.",
-            "Clinical member of the Australian Association of Family Therapists (AAFT), inductee of 2006.",
+            "Clinical member of the Australian Association of Family Therapists (AAFT), 2006.",
             "Graduate Diploma in Social Science - Family Therapy, Swinburne University Melbourne/Australia, 2003.",
             "Postgraduate training in Psychoanalytical Psychotherapy with a member of the Société Belge de Psychanalyse de Bruxelles, 1988.",
             "Diploma of Psychology, Psychotechnical Institute Antwerp/Belgium, 1985.",
