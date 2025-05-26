@@ -165,13 +165,6 @@ export default function Footer() {
                             label={FooterData.right.email}
                         />
                     </Grid>
-                    <Grid item>
-                        <DataLink
-                            data={phone_string}
-                            mobile={true}
-                            label={FooterData.right.phone}
-                        />
-                    </Grid>
                 </Grid>
             </Grid>
         </Grid>
